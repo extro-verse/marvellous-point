@@ -392,10 +392,15 @@
         </nav>
     
         <script>;
-          window.addEventListener("load", function () {
+        //   window.addEventListener("load", function () {
+        //     document.getElementById('boot-screen').style.display = 'none';
+        //     document.getElementById('main-content').style.display = 'block';
+        //  });
+
+         setTimeout(() => {
             document.getElementById('boot-screen').style.display = 'none';
             document.getElementById('main-content').style.display = 'block';
-         });
+        }, 5000);
         
         // Simple carousel functionality
             const carousels = document.querySelectorAll('[class*="flex space-x-3 overflow-x-auto"]');
