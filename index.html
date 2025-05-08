@@ -19,6 +19,15 @@
             scrollbar-color: #333 #111;
         }
 
+        #boot-screen, #main-content {
+             transition: opacity 1s ease;
+             opacity: 1;
+            }
+        
+        .hidden {
+            opacity: 0;
+        }
+
         @keyframes progress {
             0% { width: 0%; }
             40% { width: 40%;}
@@ -405,9 +414,23 @@
         //     document.getElementById('main-content').style.display = 'block';
         //  });
 
-         setTimeout(() => {
-            document.getElementById('boot-screen').style.display = 'none';
-            document.getElementById('main-content').style.display = 'block';
+        setTimeout(() => {
+            const boot = document.getElementById('boot-screen');
+            const main = document.getElementById('main-content');
+            // Start fading out the boot screen
+            boot.classList.add('hidden');
+             
+            // Wait for the fade-out to finish before hiding and showing content
+            setTimeout(() => {
+                boot.style.display = 'none';
+                main.style.display = 'block';
+                main.classList.add('hidden'); // Start hidden
+                
+             // Force reflow to allow transition
+             void main.offsetWidth;
+             // Then fade in
+             main.classList.remove('hidden');
+            }, 1000); // match the fade-out duration
         }, 5000);
         
         // Simple carousel functionality
