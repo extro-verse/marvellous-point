@@ -7,6 +7,101 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #000;
+            min-height: 100vh;
+            color: white;
+            scrollbar-width: thin;
+            scrollbar-color: #333 #111;
+        }
+        
+        /* Custom scrollbar for WebKit browsers */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #111;
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #444;
+        }
+        
+        .glass-card {
+            background: rgba(30, 30, 30, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(0,0,0,0.4) 10%, rgba(0,0,0,0.4) 10%);
+        }
+        
+        .carousel-item {
+            transition: transform 0.5s ease;
+        }
+        
+        .content-card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+        
+        .nav-item.active {
+            border-bottom: 2px solid #fff;
+        }
+        
+        .profile-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-icon:hover {
+            transform: scale(1.1);
+        }
+        
+        .search-bar {
+            transition: all 0.3s ease;
+        }
+        
+        .search-bar:focus-within {
+            width: 90%;
+        }
+        
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .progress-bar {
+            background: #333;
+        }
+        
+        .progress-fill {
+            background: linear-gradient(90deg, #555, #999);
+        }
+        
+        .new-badge {
+            background: linear-gradient(90deg, #222, #444);
+            border: 1px solid #666;
+        }
         .glass-effect {
             font-family: 'Montserrat', sans-serif;
             background: #000;
