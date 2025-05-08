@@ -30,7 +30,6 @@
 
         @keyframes progress {
             0% { width: 0%; }
-            40% { width: 40%;}
             70% { width: 70%;}
             100% { width: 100%; }
         }
@@ -418,20 +417,18 @@
             const boot = document.getElementById('boot-screen');
             const main = document.getElementById('main-content');
             // Start fading out the boot screen
-            boot.classList.add('hidden');
+            boot.style.display = 'none';
              
-            // Wait for the fade-out to finish before hiding and showing content
-            setTimeout(() => {
-                boot.style.display = 'none';
-                main.style.display = 'block';
+                // boot.style.display = 'none';
+                // main.style.display = 'block';
                 main.classList.add('hidden'); // Start hidden
+                main.style.display = 'block'; // Make it visible but transparent
                 
              // Force reflow to allow transition
              void main.offsetWidth;
              // Then fade in
              main.classList.remove('hidden');
-            }, 1000); // match the fade-out duration
-        }, 5000);
+            }, 2000); // match the fade-out duration
         
         // Simple carousel functionality
             const carousels = document.querySelectorAll('[class*="flex space-x-3 overflow-x-auto"]');
