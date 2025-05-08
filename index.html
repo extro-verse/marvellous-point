@@ -20,7 +20,7 @@
         }
 
         #boot-screen, #main-content {
-             transition: opacity 1s ease;
+             transition: opacity 0.100s ease;
              opacity: 1;
             }
         
@@ -428,7 +428,7 @@
              void main.offsetWidth;
              // Then fade in
              main.classList.remove('hidden');
-            }, 2000); // match the fade-out duration
+            }, 5000); // match the fade-out duration
         
         // Simple carousel functionality
             const carousels = document.querySelectorAll('[class*="flex space-x-3 overflow-x-auto"]');
