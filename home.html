@@ -8,6 +8,7 @@
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="https://files.softicons.com/download/application-icons/books-icons-by-deleket/png/256x256/Marvel-01.png">
+    <script src="https://cdn.jsdelivr.net/npm/webchimera.js/dist/webchimera.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
         
@@ -676,8 +677,8 @@
                 <span>Methods</span>
             </a>
         </nav>
-        <script>;
-        
+        <script>
+            
         // Simple carousel functionality
             const carousels = document.querySelectorAll('[class*="flex space-x-3 overflow-x-auto"]');
             
@@ -724,6 +725,14 @@
             function goBack() {
                 window.history.back();
             }
+            
+            WCJSPlayer.createPlayer('#player', {
+                        file: "https://filetolinkex-199d819ddaa1.herokuapp.com/740310/Thunderbolts_2025_1080p_TELESYNC_Hindi_English_HD_Movies_Earth.mkv?hash=AgADLR",
+                        autoplay: true,
+                        width: 800,
+                        height: 450,
+                        controls: true
+            });
         </script>
     </body>
 </html>
