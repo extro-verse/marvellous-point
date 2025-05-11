@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Poster to Trailer and Back</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://www.youtube.com/iframe_api"></script> <!-- YouTube API -->
+</head>
+<body class="bg-black flex items-center justify-center min-h-screen">
+
+<section class="relative rounded-xl overflow-hidden w-full max-w-4xl mx-auto shadow-lg">
+    <div class="aspect-video w-full bg-black flex items-center justify-center relative" id="media-container">
+        
+        <!-- Poster Image -->
+        <img 
+            src="https://www.hindustantimes.com/ht-img/img/2025/04/30/550x309/Thunderbolts_movie_review_1745985665428_1746003123166.jpg" 
+            alt="Movie Poster" 
+            class="absolute inset-0 w-full h-full object-cover opacity-80 transition-opacity duration-1000" 
+            id="poster"
+        >
+
+        <!-- YouTube Trailer Iframe (API controlled) -->
+        <div id="player" class="absolute inset-0 w-full h-full hidden"></div>
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+    </div>
+</section>
+
+<script>
+    let player;
+
+    // YouTube API callback to create player
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            videoId: 'MThsCgeRzvE', // Your video ID
+            playerVars: {
+                autoplay: 1,
+                mute: 1, // Required for autoplay to work
+                controls: 1,
+                rel: 0,
+                modestbranding: 1
+            },
+            events: {
+                onStateChange: onPlayerStateChange
+            }
+        });
+    }
+
+    // Video state change handler
+    function onPlayerStateChange(event) {
+        const poster = document.getElementById('poster');
+        const playerDiv = document.getElementById('player');
+
+        // When video ends (state 0)
+        if (event.data === YT.PlayerState.ENDED) {
+            playerDiv.classList.add('hidden');
+            poster.style.display = 'block';
+            poster.classList.remove('opacity-0');
+        }
+    }
+
+    // After 8s, switch poster to video
+    setTimeout(() => {
+        const poster = document.getElementById('poster');
+        const playerDiv = document.getElementById('player');
+
+        poster.classList.add('opacity-0');
+
+        setTimeout(() => {
+            poster.style.display = 'none';
+            playerDiv.classList.remove('hidden');
+            if (player && typeof player.playVideo === 'function') {
+                player.playVideo();
+            }
+        }, 1000);
+    }, 8000);
+</script>
+
+</body>
+</html>
