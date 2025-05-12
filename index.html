@@ -32,6 +32,30 @@
             color: white;
             min-height: 100vh;
         }
+
+        #boot-screen, #main-content {
+             transition: opacity 0.100s ease;
+             opacity: 1;
+        }
+        
+        .hidden {
+            opacity: 0;
+        }
+
+        @keyframes progress {
+            0% { width: 0%; }
+            70% { width: 70%;}
+            100% { width: 100%; }
+        }
+        
+        .animate-progress {
+            animation: progress 5s linear forwards;
+        }
+
+        .logo {
+            width: 172px;
+            height: auto; /* Maintain aspect ratio */
+        }
         
         .glass-card {
             background: rgba(21, 21, 21, 0.7);
@@ -105,7 +129,19 @@
         }
     </style>
 </head>
-<body class="overflow-x-hidden">
+<div id="boot-screen" class="fixed inset-0 bg-black flex flex-col justify-center items-center z-50">
+    <!-- Marvel Logo SVG -->
+    <img src="marvel-logo-svg-vector.svg" alt="Marvel Logo" class="logo">
+    <svg class="w-20 h-20 mb-6" viewBox="0 0 100 100" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <path d="marvel-logo-svg-vector.svg"/>
+    </svg>
+    <!-- Progress Bar -->
+    <div class="w-40 h-1 bg-gray-700 rounded overflow-hidden">
+        <div class="h-full bg-white animate-progress"></div>
+    </div>
+</div>
+<div id="main-content" style="display: none;">
+    <body class="overflow-x-hidden">
     <!-- Header -->
     <header class="glass-card sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -523,6 +559,25 @@
     </footer>
 
     <script>
+
+        setTimeout(() => {
+            const boot = document.getElementById('boot-screen');
+            const main = document.getElementById('main-content');
+            // Start fading out the boot screen
+            boot.style.display = 'none';
+             
+                // boot.style.display = 'none';
+                // main.style.display = 'block';
+                main.classList.add('hidden'); // Start hidden
+                main.style.display = 'block'; // Make it visible but transparent
+                
+             // Force reflow to allow transition
+             void main.offsetWidth;
+             // Then fade in
+             main.classList.remove('hidden');
+        }, 5000); // match the fade-out duration
+
+
         // Password protection for secret section
         document.getElementById('submit-btn').addEventListener('click', function() {
             const password = document.getElementById('password').value;
@@ -556,4 +611,5 @@
         // Mobile menu toggle would go here
     </script>
 </body>
+</div>
 </html>
