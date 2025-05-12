@@ -138,18 +138,23 @@
         <!-- Hero Section -->
         <section class="relative rounded-xl overflow-hidden mb-6">
             <div class="aspect-video w-full bg-gradient-to-r flex items-center justify-center">
-                <img src="https://sfreporter.com/downloads/61535/download/Movies-2-Gaurdians-Vol-3.jpg?cb=6d5524590a8cb1a4b49bc1208aa0ebea" alt="Movie Poster" class="absolute inset-0 w-full h-full object-cover opacity-70">
-                <div class="absolute inset-0 hero-gradient"></div>
-                <!-- <div class="relative z-10 p-6 w-full">
-                    <div class="flex justify-center mb-4">
-                        <button class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-bold flex items-center">
-                            <i class="fas fa-play mr-2"></i> Play Now
-                        </button>
-                    </div>
-                    <button class="glassy-bg text-white px-4 py-2 rounded-full text-sm flex items-center mx-auto">
-                        <i class="fas fa-download mr-2"></i> Download
-                    </button>
-                </div> -->
+        <img 
+            src="https://sfreporter.com/downloads/61535/download/Movies-2-Gaurdians-Vol-3.jpg?cb=6d5524590a8cb1a4b49bc1208aa0ebea" 
+            alt="Movie Poster" 
+            class="absolute inset-0 w-full h-full object-cover opacity-80 transition-opacity duration-1000" 
+            id="poster"
+        >
+                <iframe 
+                    id="trailer"
+                    class="absolute inset-0 w-full h-full hidden"
+                    src="https://www.youtube.com/embed/DJ-n__NLNkg?autoplay=1&mute=1"
+                    title="Trailer"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             </div>
         </section>
 
@@ -214,77 +219,56 @@
                     </div>
                 </div>
             </div>
-
-            <div class="glassy-bg p-5 rounded-xl md-4" style="margin-top: 15px;" >
-                <h2 class="font-bold mb-2">File Access</h2>
-                <p1 class="text-gray-300 text-sm">
-                    Paste the below code on the bot : https://t.me/Xnoverse_bot
-                </p1>
-                <p style="font-family: monospace;"><b>/antman3</b></p>
+            <div class="glassy-bg p-5 rounded-xl md-4" style="margin-top: 15px;">
+                <button id="Buttonone" class="relative px-6 py-2 font-semibold rounded-xl text-white backdrop-blur-lg bg-white/10 border border-white/30 shadow-md transition-all duration-300 hover:bg-white/20 hover:border-white/50 hover:shadow-lg">
+                    <span class="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-500 opacity-30 blur-lg"></span>
+                    <span class="relative">Access</span>
+                </button>
+                <button id="Buttontwo" class="relative px-6 py-2 font-semibold rounded-xl text-white backdrop-blur-lg bg-white/10 border border-white/30 shadow-md transition-all duration-300 hover:bg-white/20 hover:border-white/50 hover:shadow-lg">
+                    <span class="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-500 opacity-30 blur-lg"></span>
+                    <span class="relative">Download</span>
+                </button>
             </div>
         </section>
 
-        <!-- More Like This
+        <!-- More Like This -->
         <section class="mb-6">
-            <h2 class="text-xl font-bold mb-3">More Like This</h2>
+            <h2 class="text-xl font-bold mb-3">Ant-Man trilogy</h2>
             <div class="flex space-x-3 overflow-x-auto scroll-hidden pb-2">
-                <div class="flex-shrink-0 w-32">
-                    <div class="aspect-[2/3] rounded-lg overflow-hidden">
-                        <img src="https://via.placeholder.com/150x225/800080/FFFFFF?text=Movie1" alt="Movie" class="w-full h-full object-cover">
-                    </div>
-                    <p class="text-sm mt-1 truncate">Dragon's Legacy</p>
-                </div>
-                <div class="flex-shrink-0 w-32">
-                    <div class="aspect-[2/3] rounded-lg overflow-hidden">
-                        <img src="https://via.placeholder.com/150x225/008080/FFFFFF?text=Movie2" alt="Movie" class="w-full h-full object-cover">
-                    </div>
-                    <p class="text-sm mt-1 truncate">Pixie Hollow</p>
-                </div>
-                <div class="flex-shrink-0 w-32">
-                    <div class="aspect-[2/3] rounded-lg overflow-hidden">
-                        <img src="https://via.placeholder.com/150x225/FF6347/FFFFFF?text=Movie3" alt="Movie" class="w-full h-full object-cover">
-                    </div>
-                    <p class="text-sm mt-1 truncate">The Lost Crown</p>
-                </div>
-                <div class="flex-shrink-0 w-32">
-                    <div class="aspect-[2/3] rounded-lg overflow-hidden">
-                        <img src="https://via.placeholder.com/150x225/4682B4/FFFFFF?text=Movie4" alt="Movie" class="w-full h-full object-cover">
-                    </div>
-                    <p class="text-sm mt-1 truncate">Mystic Falls</p>
-                </div>
-            </div> -->
-        </section>
-
-        <!-- Extras -->
-        <!-- <section>
-            <h2 class="relative overflow-x-hidden font-bold mb-3">trailers</h2>
-            <div class="grid grid-cols-2 gap-3">
-                <div class="glassy-bg p-3 rounded-lg">
-                    <div class="aspect-video bg-gray-800 rounded mb-2 flex items-center justify-center">
-                        <i class="fas fa-play-circle text-3xl text-gray-400"></i>
-                    </div>
-                    <p class="text-sm font-medium">Behind the Magic</p>
-                    <p class="text-xs text-gray-400">Featurette • 5m</p>
-                </div>
-                <div class="glassy-bg p-3 rounded-lg">
-                    <div class="aspect-video bg-gray-800 rounded mb-2 flex items-center justify-center">
-                        <i class="fas fa-play-circle text-3xl text-gray-400"></i>
-                    </div>
-                    <p class="text-sm font-medium">Meet the Cast</p>
-                    <p class="text-xs text-gray-400">Interview • 8m</p>
-                </div>
-            </div>
-        </section> -->
-        <!-- <section>
-            <h2 class="relative overflow-x-hidden font-bold mb-3">Trailers</h2>
-                <div class="glassy-bg p-3 rounded-lg">
-                    <a href="https://your-movie-player-link.com" target="_blank">
-                        <div class="aspect-video bg-gray-800 rounded mb-2 flex items-center justify-center">
-                            <i class="fas fa-play-circle text-3xl text-gray-400"></i>
+                <a href="overview-6.html">
+                    <div class="flex-shrink-0 w-32">
+                        <div class="aspect-[2/3] rounded-lg overflow-hidden">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/1/12/Ant-Man_%28film%29_poster.jpg" alt="Content" class="w-full h-full object-cover">
                         </div>
-                    </a>
+                        <p class="text-sm mt-1 truncate">Ant-Man</p>
+                    </div>
+                </a>
+                <a href="overview-6.html">
+                    <div class="flex-shrink-0 w-32">
+                        <div class="aspect-[2/3] rounded-lg overflow-hidden">
+                            <img src="https://m.media-amazon.com/images/M/MV5BODVkY2ZmZTAtYzFhMi00YzZlLWE2YWMtMDBiYjY2OTU4ZWM0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Content" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-sm mt-1 truncate">Ant-Man and Wasp</p>
+                    </div>
+                </a>
+                <a href="overview-6.html">
+                    <div class="flex-shrink-0 w-32">
+                        <div class="aspect-[2/3] rounded-lg overflow-hidden">
+                            <img src="https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg" alt="Content" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-sm mt-1 truncate">Avengers End Game</p>
+                    </div>
+                </a>
+                <a href="overview-6.html">
+                    <div class="flex-shrink-0 w-32">
+                        <div class="aspect-[2/3] rounded-lg overflow-hidden">
+                            <img src="https://external-preview.redd.it/ant-man-the-wasp-quantumania-official-discussion-thread-v0-5b3LKzwo2OgEuTke-6Vx6NbdKAueAyUKSUvtvPO5IeA.jpg?width=640&crop=smart&auto=webp&s=a48ec73d3c5377ab675328ffbe63e6638ea1e76c" alt="Movie Poster" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-sm mt-1 truncate">Quantumania</p>
+                    </div>
+                </a>
             </div>
-        </section> -->
+        </section>
         
     </main>
     <!-- Bottom Navigation -->
@@ -312,6 +296,18 @@
     </nav>
 
     <script>
+        setTimeout(() => {
+            const poster = document.getElementById('poster');
+            const trailer = document.getElementById('trailer');
+
+            poster.classList.add('opacity-0');
+            setTimeout(() => {
+                poster.style.display = 'none';
+                trailer.classList.remove('hidden');
+            }, 1000);
+        }, 4000); // show poster for 8 seconds
+
+
         // Simple interaction for the like button
         document.addEventListener('DOMContentLoaded', function() {
             const likeBtn = document.querySelector('.fa-heart').parentElement;
