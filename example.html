@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dummy Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-900 text-white">
+
+  <!-- Fixed Banner Header -->
+  <div class="fixed inset-x-0 top-0 z-50 flex h-14 items-center justify-between gap-12 px-4 transition sm:px-6 lg:z-30 lg:px-6 backdrop-blur-sm dark:backdrop-blur" style="--bg-opacity-light: 0.9; --bg-opacity-dark: 0.8;">
+    <div class="absolute inset-x-0 top-full h-px transition bg-zinc-900/7.5 dark:bg-white/7.5"></div>
+    <div class="relative top-1 hidden items-center justify-start lg:flex gap-4">
+      <a aria-label="Home" href="/">
+        <!-- Placeholder Logo SVG -->
+        <span class="text-xl font-bold">LOGO</span>
+      </a>
+      <div class="flex items-center gap-1">
+        <a class="hover:text-white hover:cursor-pointer text-sm font-medium px-2 py-1 rounded-md text-white bg-zinc-800" href="/docs">Documentation</a>
+      </div>
+    </div>
+    <div class="flex items-center gap-5 lg:hidden">
+      <button type="button" class="flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-zinc-900/5 dark:hover:bg-white/5" aria-label="Toggle navigation">
+        <svg viewBox="0 0 10 9" fill="none" stroke-linecap="round" aria-hidden="true" class="w-2.5 stroke-white">
+          <path d="M.5 1h9M.5 8h9M.5 4.5h9"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Spacer to prevent content being hidden under fixed header -->
+  <div class="h-16"></div>
+
+  <!-- Main Content -->
+  <main class="px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
+    <h1 class="text-3xl font-bold mb-4">Welcome to the Dummy Page</h1>
+    <p class="mb-6">This is placeholder content to simulate a full-length web page. Scroll down to see more content and the fixed header in action.</p>
+
+    <!-- Generate lots of dummy paragraphs -->
+    <div class="space-y-6">
+      <!-- Repeat dummy content 20 times -->
+      ${Array.from({ length: 20 }, (_, i) => `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. (${i + 1})</p>`).join("")}
+    </div>
+    
+    <p class="mb-6">This is placeholder content to simulate a full-length web page. Scroll down to see more content and the fixed header in action.</p>
+
+    <!-- Generate lots of dummy paragraphs -->
+    <div class="space-y-6">
+      <!-- Repeat dummy content 20 times -->
+      ${Array.from({ length: 20 }, (_, i) => `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. (${i + 1})</p>`).join("")}
+    </div>
+
+    <p class="mb-6">This is placeholder content to simulate a full-length web page. Scroll down to see more content and the fixed header in action.</p>
+
+    <!-- Generate lots of dummy paragraphs -->
+    <div class="space-y-6">
+      <!-- Repeat dummy content 20 times -->
+      ${Array.from({ length: 20 }, (_, i) => `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. (${i + 1})</p>`).join("")}
+    </div>
+
+        <p class="mb-6">This is placeholder content to simulate a full-length web page. Scroll down to see more content and the fixed header in action.</p>
+
+    <!-- Generate lots of dummy paragraphs -->
+    <div class="space-y-6">
+      <!-- Repeat dummy content 20 times -->
+      ${Array.from({ length: 20 }, (_, i) => `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. (${i + 1})</p>`).join("")}
+    </div>
+
+    <footer class="mt-20 border-t border-zinc-700 pt-10 pb-5 text-center text-sm text-zinc-400">
+      &copy; 2025 Dummy Website. All rights reserved.
+    </footer>
+  </main>
+</body>
+</html>
