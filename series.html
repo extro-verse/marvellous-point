@@ -1,4 +1,3 @@
-html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +7,7 @@ html
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="https://files.softicons.com/download/application-icons/books-icons-by-deleket/png/256x256/Marvel-01.png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
         
@@ -108,7 +108,7 @@ html
 </head>
 <body class="relative overflow-x-hidden">
     <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 px-4 py-3 flex justify-between items-center bg-black bg-opacity-90 backdrop-filter backdrop-blur-lg">
+    <header class="fixed top-0 left-0 right-0 z-50 px-4 py-3 flex justify-between items-center bg-black bg-opacity-70 backdrop-filter backdrop-blur-lg">
         <div class="flex items-center">
             <div class="text-2xl font-bold bg-gradient-to-r from-gray-300 to-gray-100 bg-clip-text text-transparent">
                 Marvel - Series
@@ -149,11 +149,11 @@ html
         <!-- Navigation -->
         <nav class="flex overflow-x-auto pb-2 mb-4 hide-scrollbar">
             <div class="flex space-x-4">
-                <a href="index.html" class="px-3 py-2 text-sm font-medium whitespace-nowrap text-gray-400 hover:text-white transition">Home</a>
+                <a href="home.html" class="px-3 py-2 text-sm font-medium whitespace-nowrap text-gray-400 hover:text-white transition">Home</a>
                 <a href="series.html" class="nav-item active px-3 py-2 text-sm font-medium whitespace-nowrap text-white">Tv Shows</a>
-                <a href="files/movies.html" class="px-3 py-2 text-sm font-medium whitespace-nowrap text-gray-400 hover:text-white transition">Movies</a>
-                <a href="files/originals.html" class="px-3 py-2 text-sm font-medium whitespace-nowrap text-gray-400 hover:text-white transition">Originals</a>
-                <a href="#" class="px-3 py-2 text-sm font-medium whitespace-nowrap text-gray-400 hover:text-white transition">My List</a>
+                <a href="movies.html" class="px-3 py-2 text-sm font-medium whitespace-nowrap text-gray-400 hover:text-white transition">Movies</a>
+                <a href="originals.html" class="px-3 py-2 text-sm font-medium whitespace-nowrap text-gray-400 hover:text-white transition">Originals</a>
+                <a href="suggestions.html" class="px-3 py-2 text-sm font-medium whitespace-nowrap text-gray-400 hover:text-white transition">Suggestions</a>
             </div>
         </nav>
 
@@ -273,28 +273,29 @@ html
     </main>
 
     <!-- Bottom Navigation -->
-    <nav class="fixed bottom-0 left-0 right-0 bg-black bg-opacity-90 backdrop-filter backdrop-blur-lg flex justify-around py-3 px-4 z-50 border-t border-gray-800">
-        <a href="#" class="flex flex-col items-center text-white text-xs">
-            <i class="fas fa-home text-lg mb-1"></i>
-            <span>Home</span>
-        </a>
-        <a href="#" class="flex flex-col items-center text-gray-400 text-xs hover:text-white transition">
-            <i class="fas fa-search text-lg mb-1"></i>
-            <span>Search</span>
-        </a>
-        <a href="animes.html" class="flex flex-col items-center text-gray-400 text-xs hover:text-white transition">
-            <i class="fas fa-compass text-lg mb-1"></i>
-            <span>Anime Shows</span>
-        </a>
-        <a href="#" class="flex flex-col items-center text-gray-400 text-xs hover:text-white transition">
-            <i class="fas fa-download text-lg mb-1"></i>
-            <span>Downloads</span>
-        </a>
-        <a href="#" class="flex flex-col items-center text-gray-400 text-xs hover:text-white transition">
-                <i class="fas fa-arrow-left text-lg mb-1"></i>
-                <span onclick="goBack()">Go Back</button></span>
-        </a>
-    </nav>
+        <!-- Bottom Navigation -->
+        <nav class="fixed bottom-0 left-0 right-0 bg-black bg-opacity-90 backdrop-filter backdrop-blur-lg flex justify-around py-3 px-4 z-50 border-t border-gray-800">
+            <a href="home.html" class="flex flex-col items-center text-white text-xs">
+                <i class="fas fa-home text-lg mb-1"></i>
+                <span>Home</span>
+            </a>
+            <a href="https://t.me/Xnoverse_bot" class="flex flex-col items-center text-gray-400 text-xs hover:text-white transition">
+                <i class="fa fa-cog text-lg mb-1"></i>
+                <span>Access</span>
+            </a>
+            <a href="series.html" class="flex flex-col items-center text-gray-400 text-xs hover:text-white transition">
+                <i class="fas fa-compass text-lg mb-1"></i>
+                <span>Shows</span>
+            </a>
+            <a href="https://t.me/Marvel_Tamil_Official" class="flex flex-col items-center text-gray-400 text-xs hover:text-white transition">
+                <i class="fa fa-download text-lg mb-1"></i>
+                <span>Channel</span>
+            </a>
+            <a href="usingmethods.html" class="flex flex-col items-center text-gray-400 text-xs hover:text-white transition">
+                <i class="fas fa-question text-lg mb-1"></i>
+                <span>Methods</span>
+            </a>
+        </nav>
 
     <script>
         // Simple carousel functionality
