@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple-Style Boot Screen</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+        body {
+            font-family: 'Bebas Neue', sans-serif;
+            background-color: black;
+            background-size: cover;
+            color: white;
+            min-height: 100vh;
+        }
+
+        #boot-screen,
+        #main-content {
+            transition: opacity 0.5s ease;
+            opacity: 1;
+        }
+
+        .hidden {
+            opacity: 0;
+        }
+
+        /* macOS spinning beach ball loader */
+        .loader {
+            width: 48px;
+            height: 48px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .loader-circle {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .loader-circle::before {
+            content: '';
+            display: block;
+            width: 15%;
+            height: 15%;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: beachBallFade 1.2s infinite ease-in-out both;
+        }
+
+        /* Colors for the beach ball segments (mimicking macOS colors) */
+        .loader-circle:nth-child(1)::before {
+            background-color: #ff3b30;
+        }
+
+        /* Red */
+        .loader-circle:nth-child(2)::before {
+            background-color: #ff9500;
+        }
+
+        /* Orange */
+        .loader-circle:nth-child(3)::before {
+            background-color: #ffcc00;
+        }
+
+        /* Yellow */
+        .loader-circle:nth-child(4)::before {
+            background-color: #4cd964;
+        }
+
+        /* Green */
+        .loader-circle:nth-child(5)::before {
+            background-color: #5ac8fa;
+        }
+
+        /* Light Blue */
+        .loader-circle:nth-child(6)::before {
+            background-color: #007aff;
+        }
+
+        /* Blue */
+        .loader-circle:nth-child(7)::before {
+            background-color: #5856d6;
+        }
+
+        /* Purple */
+        .loader-circle:nth-child(8)::before {
+            background-color: #ff2d55;
+        }
+
+        /* Pink */
+        .loader-circle:nth-child(9)::before {
+            background-color: #ff3b30;
+        }
+
+        /* Red */
+        .loader-circle:nth-child(10)::before {
+            background-color: #ff9500;
+        }
+
+        /* Orange */
+        .loader-circle:nth-child(11)::before {
+            background-color: #ffcc00;
+        }
+
+        /* Yellow */
+        .loader-circle:nth-child(12)::before {
+            background-color: #4cd964;
+        }
+
+        /* Green */
+
+        /* Rotate each segment to form a circle */
+        .loader-circle:nth-child(2) {
+            transform: rotate(30deg);
+        }
+
+        .loader-circle:nth-child(3) {
+            transform: rotate(60deg);
+        }
+
+        .loader-circle:nth-child(4) {
+            transform: rotate(90deg);
+        }
+
+        .loader-circle:nth-child(5) {
+            transform: rotate(120deg);
+        }
+
+        .loader-circle:nth-child(6) {
+            transform: rotate(150deg);
+        }
+
+        .loader-circle:nth-child(7) {
+            transform: rotate(180deg);
+        }
+
+        .loader-circle:nth-child(8) {
+            transform: rotate(210deg);
+        }
+
+        .loader-circle:nth-child(9) {
+            transform: rotate(240deg);
+        }
+
+        .loader-circle:nth-child(10) {
+            transform: rotate(270deg);
+        }
+
+        .loader-circle:nth-child(11) {
+            transform: rotate(300deg);
+        }
+
+        .loader-circle:nth-child(12) {
+            transform: rotate(330deg);
+        }
+
+        /* Staggered animation delays for each segment */
+        .loader-circle:nth-child(2)::before {
+            animation-delay: -1.1s;
+        }
+
+        .loader-circle:nth-child(3)::before {
+            animation-delay: -1.0s;
+        }
+
+        .loader-circle:nth-child(4)::before {
+            animation-delay: -0.9s;
+        }
+
+        .loader-circle:nth-child(5)::before {
+            animation-delay: -0.8s;
+        }
+
+        .loader-circle:nth-child(6)::before {
+            animation-delay: -0.7s;
+        }
+
+        .loader-circle:nth-child(7)::before {
+            animation-delay: -0.6s;
+        }
+
+        .loader-circle:nth-child(8)::before {
+            animation-delay: -0.5s;
+        }
+
+        .loader-circle:nth-child(9)::before {
+            animation-delay: -0.4s;
+        }
+
+        .loader-circle:nth-child(10)::before {
+            animation-delay: -0.3s;
+        }
+
+        .loader-circle:nth-child(11)::before {
+            animation-delay: -0.2s;
+        }
+
+        .loader-circle:nth-child(12)::before {
+            animation-delay: -0.1s;
+        }
+
+        @keyframes beachBallFade {
+
+            0%,
+            39%,
+            100% {
+                opacity: 0.2;
+            }
+
+            40% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="boot-screen" class="fixed inset-0 bg-black flex justify-center items-center z-50">
+        <!-- macOS spinning beach ball loader -->
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
+        </div>
+    </div>
+    <div id="main-content" class="hidden">
+        <!-- Your main content here -->
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="hidden">
+        <h1>Welcome to the Marvel Universe</h1>
+        <p>Experience the magic of heroes and villains.</p>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            const boot = document.getElementById('boot-screen');
+            const main = document.getElementById('main-content');
+
+            // Start fading out the boot screen
+            boot.classList.add('hidden');
+
+            // Make main content visible but transparent
+            main.style.display = 'block';
+
+            // Force reflow to ensure transition
+            void main.offsetWidth;
+
+            // Fade in main content
+            main.classList.remove('hidden');
+
+            // Hide boot screen after fade-out
+            setTimeout(() => {
+                boot.style.display = 'none';
+            }, 500); // Match the CSS transition duration
+        }, 2000); // Duration to show the loader
+    </script>
+
+</body>
+
+</html>
