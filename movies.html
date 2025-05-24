@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anisuvai - Premium Telegram Streaming index</title>
+    <title>Marvel - MCU Movies</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="https://files.softicons.com/download/application-icons/books-icons-by-deleket/png/256x256/Marvel-01.png">
+    <link rel="icon" type="image/png"
+        href="https://files.softicons.com/download/application-icons/books-icons-by-deleket/png/256x256/Marvel-01.png">
+    <script src="https://cdn.jsdelivr.net/npm/webchimera.js/dist/webchimera.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
-        
+
         body {
             font-family: 'Montserrat', sans-serif;
-            background: #000;
+            background: #000000;
             min-height: 100vh;
             color: white;
             scrollbar-width: thin;
             scrollbar-color: #333 #111;
         }
-        
+
         /* Custom scrollbar for WebKit browsers */
         ::-webkit-scrollbar {
             width: 6px;
             height: 6px;
         }
-        
+
         ::-webkit-scrollbar-track {
             background: #111;
             border-radius: 10px;
         }
-        
+
         ::-webkit-scrollbar-thumb {
             background: #333;
             border-radius: 10px;
         }
-        
+
         ::-webkit-scrollbar-thumb:hover {
             background: #444;
         }
-        
+
         .glass-card {
             background: rgba(30, 30, 30, 0.7);
             backdrop-filter: blur(10px);
@@ -48,79 +51,68 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
         }
-        
-        .hero-gradient {
-            background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
-        }
-        
+
         .carousel-item {
             transition: transform 0.5s ease;
         }
-        
+
         .content-card:hover {
             transform: scale(1.05);
             transition: transform 0.3s ease;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
         }
-        
+
         .nav-item.active {
             border-bottom: 2px solid #fff;
         }
-        
+
         .profile-icon {
             transition: transform 0.3s ease;
         }
-        
+
         .profile-icon:hover {
             transform: scale(1.1);
         }
-        
+
         .search-bar {
             transition: all 0.3s ease;
         }
-        
+
         .search-bar:focus-within {
             width: 90%;
         }
-        
+
         .hide-scrollbar {
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
-        
+
         .hide-scrollbar::-webkit-scrollbar {
             display: none;
         }
-        
+
         .progress-bar {
             background: #333;
         }
-        
+
         .progress-fill {
             background: linear-gradient(90deg, #555, #999);
         }
-        
+
         .new-badge {
             background: linear-gradient(90deg, #222, #444);
             border: 1px solid #666;
         }
     </style>
 </head>
-<body class="relative overflow-x-hidden">
+
+<body class="relative overflow-x-hidden" oncontextmenu="return false;">
     <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 px-4 py-3 flex justify-between items-center bg-black bg-opacity-70 backdrop-filter backdrop-blur-lg">
+    <header
+        class="fixed top-0 left-0 right-0 z-50 px-4 py-3 flex justify-between items-center bg-black bg-opacity-70 backdrop-filter backdrop-blur-lg">
         <div class="flex items-center">
             <div class="text-2xl font-bold bg-gradient-to-r from-gray-300 to-gray-100 bg-clip-text text-transparent">
-                Marvel - Movies
-            </div>
-        </div>
-        <div class="flex items-center space-x-4">
-            <div class="search-bar flex items-center bg-gray-900 rounded-full px-3 py-1 w-10 overflow-hidden">
-                <i class="fas fa-search text-gray-400"></i>
-                <input type="text" placeholder="Search" class="bg-transparent border-none outline-none text-white ml-2 w-0 opacity-0 transition-all duration-300 placeholder-gray-400">
-            </div>
-            <div class="profile-icon w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 font-bold cursor-pointer border border-gray-700">
-                <i class="fas fa-user text-sm"></i>
+                Marvel Index
             </div>
         </div>
     </header>
@@ -128,209 +120,525 @@
     <!-- Main Content -->
     <main class="pt-16 pb-20 px-4">
         <!-- Hero Section -->
-        <section class="relative rounded-xl overflow-hidden mb-6 h-64">
+        <section class="relative rounded-xl mb-6 h-64 flex overflow-x-auto pb-2 mb-4 hide-scrollbar">
             <div class="absolute inset-0 hero-gradient z-10"></div>
-            <img src="https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/160/1741139420160-i" alt="Featured Content" class="w-full h-full object-cover">
+            <img src="https://cdn.marvel.com/content/1x/thunderboltsposter.jpeg" alt="Featured Movie"
+                class="w-full h-full object-cover">
             <div class="absolute bottom-0 left-0 right-0 z-20 p-4">
-                <h1 class="text-2xl font-bold mb-2">Daredevil: Born Again</h1>
-                <p class="text-sm text-gray-300 mb-4">Matt Murdock finds himself on a collision course with Wilson Fisk when their past identities begin to emerge.</p>
+                <h1 class="text-2xl font-bold mb-2">Thunderbolts*</h1>
                 <div class="flex space-x-3">
-                    <button class="bg-white text-black px-4 py-1 rounded-full text-sm font-semibold flex items-center hover:bg-gray-200 transition">
-                        <i class="fas fa-play mr-2"></i><a href="https://sites.google.com/view/randomesheywbduberuebuebiue/video">Now Streaming</a>
+                    <button
+                        class="bg-white text-black px-4 py-1 rounded-full text-sm font-semibold flex items-center hover:bg-gray-200 transition">
+                        <i class="fas fa-play mr-2"></i><a href="https://t.me/Marvel_Tamil_Official">Now Streaming</a>
                     </button>
-                    <button class="glass-card px-4 py-1 rounded-full text-sm font-semibold flex items-center text-white hover:bg-gray-800 transition">
-                        <i class="fas fa-info-circle mr-2"></i> Details
+                    <button
+                        class="glass-card px-4 py-1 rounded-full text-sm font-semibold flex items-center text-white hover:bg-gray-800 transition">
+                        <i class="fas fa-info-circle mr-2"></i><a href="overview-6.html">Details</a>
                     </button>
                 </div>
             </div>
         </section>
-
 
         <!-- Navigation -->
         <nav class="flex overflow-x-auto pb-2 mb-4 hide-scrollbar">
             <div class="flex space-x-4">
-                <a href="home.html" class="px-3 py-2 text-sm font-medium whitespace-nowrap text-gray-400 hover:text-white transition">Home</a>
-                <a href="series.html" class="px-3 py-2 text-sm font-medium whitespace-nowrap text-gray-400 hover:text-white transition">Tv Shows</a>
-                <a href="movies.html" class="nav-item active px-3 py-2 text-sm font-medium whitespace-nowrap text-white">Movies</a>
-                <a href="originals.html" class="px-3 py-2 text-sm font-medium whitespace-nowrap text-gray-400 hover:text-white transition">Originals</a>
-                <a href="suggestions.html" class="px-3 py-2 text-sm font-medium whitespace-nowrap text-gray-400 hover:text-white transition">Suggestions</a>
+                <a href="home.html"
+                    class="px-3 py-2 text-sm font-medium whitespace-nowrap text-gray-400 hover:text-white transition">Home</a>
+                <a href="series.html"
+                    class="px-3 py-2 text-sm font-medium whitespace-nowrap text-gray-400 hover:text-white transition">Tv
+                    Shows</a>
+                <a href="movies.html"
+                    class="nav-item active px-3 py-2 text-sm font-medium whitespace-nowrap text-white"><b>Movies</b></a>
+                <a href="originals.html"
+                    class="px-3 py-2 text-sm font-medium whitespace-nowrap text-gray-400 hover:text-white transition">Originals</a>
+                <!-- <a href="suggestions.html"
+                    class="px-3 py-2 text-sm font-medium whitespace-nowrap text-gray-400 hover:text-white transition">Suggestions</a> -->
             </div>
         </nav>
 
-        <!-- Content Carousels -->
+        <!-- Upcoming Movies -->
         <section class="mb-8">
-            <h2 class="text-lg font-bold mb-3 text-white">Phase 5 Series</h2>
+            <h2 class="text-lg font-bold mb-3 text-white">Upcoming Movies</h2>
             <div class="relative">
                 <div class="flex space-x-3 overflow-x-auto pb-4 hide-scrollbar">
-                    <div class="content-card glass-card flex-shrink-0 w-32 h-48 rounded-lg overflow-hidden relative">
-                        <img src="https://source.unsplash.com/random/200x300/?fantasy" alt="Content" class="w-full h-full object-cover">
-                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
-                            <p class="text-xs text-gray-300">Newly Arrived</p>
+                    <a href="fantastic-four.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://www.themoviedb.org/t/p/original/5jLkbBTOhW3L8bK3lZ3FeOvpH1h.jpg"
+                                alt="Fantastic Four: First Steps" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Fantastic Four: First Steps</p>
+                            </div>
+                            <div class="absolute top-2 right-2 new-badge text-white text-xs px-1 rounded">2025</div>
                         </div>
-                    </div>
-                    <div class="content-card glass-card flex-shrink-0 w-32 h-48 rounded-lg overflow-hidden relative">
-                        <img src="https://source.unsplash.com/random/200x300/?adventure" alt="Content" class="w-full h-full object-cover">
-                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
-                            <p class="text-xs text-gray-300">Newly Arrived</p>
+                    </a>
+                    <a href="avengers-doomsday.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://cdn.mos.cms.futurecdn.net/wkCnxDqXq49hYfH3nNKB3c-1200-80.jpg"
+                                alt="Avengers: Doomsday" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Avengers: Doomsday</p>
+                            </div>
+                            <div class="absolute top-2 right-2 new-badge text-white text-xs px-1 rounded">2026</div>
                         </div>
-                    </div>
-                    <div class="content-card glass-card flex-shrink-0 w-32 h-48 rounded-lg overflow-hidden relative">
-                        <img src="https://source.unsplash.com/random/200x300/?sci-fi" alt="Content" class="w-full h-full object-cover">
-                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
-                            <p class="text-xs text-gray-300">Newly Arrived</p>
+                    </a>
+                    <a href="avengers-secret-wars.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://i0.wp.com/www.comicsbeat.com/wp-content/uploads/2024/10/Avengers-Secret-Wars-Poster.jpg"
+                                alt="Avengers: Secret Wars" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Avengers: Secret Wars</p>
+                            </div>
+                            <div class="absolute top-2 right-2 new-badge text-white text-xs px-1 rounded">2027</div>
                         </div>
-                    </div>
-                    <div class="content-card glass-card flex-shrink-0 w-32 h-48 rounded-lg overflow-hidden relative">
-                        <img src="https://source.unsplash.com/random/200x300/?action" alt="Content" class="w-full h-full object-cover">
-                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
-                            <p class="text-xs text-gray-300">Newly Arrived</p>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Popular on the marvel -->
+        <!-- Phase 5 Movies -->
         <section class="mb-8">
-            <h2 class="text-lg font-bold mb-3 text-white">Popular on Marvel List</h2>
+            <h2 class="text-lg font-bold mb-3 text-white">Phase 5 Movies</h2>
             <div class="relative">
                 <div class="flex space-x-3 overflow-x-auto pb-4 hide-scrollbar">
-                    <div class="content-card glass-card flex-shrink-0 w-40 h-24 rounded-lg overflow-hidden">
-                        <img src="https://source.unsplash.com/random/300x200/?movie" alt="Content" class="w-full h-full object-cover">
-                    </div>
-                    <div class="content-card glass-card flex-shrink-0 w-40 h-24 rounded-lg overflow-hidden">
-                        <img src="https://source.unsplash.com/random/300x200/?series" alt="Content" class="w-full h-full object-cover">
-                    </div>
-                    <div class="content-card glass-card flex-shrink-0 w-40 h-24 rounded-lg overflow-hidden">
-                        <img src="https://source.unsplash.com/random/300x200/?fantasy" alt="Content" class="w-full h-full object-cover">
-                    </div>
-                    <div class="content-card glass-card flex-shrink-0 w-40 h-24 rounded-lg overflow-hidden">
-                        <img src="https://source.unsplash.com/random/300x200/?adventure" alt="Content" class="w-full h-full object-cover">
-                    </div>
-                    <div class="content-card glass-card flex-shrink-0 w-40 h-24 rounded-lg overflow-hidden">
-                        <img src="https://source.unsplash.com/random/300x200/?fantasy" alt="Content" class="w-full h-full object-cover">
-                    </div>
-                    <div class="content-card glass-card flex-shrink-0 w-40 h-24 rounded-lg overflow-hidden">
-                        <img src="https://source.unsplash.com/random/300x200/?fantasy" alt="Content" class="w-full h-full object-cover">
-                    </div>
-                    <div class="content-card glass-card flex-shrink-0 w-40 h-24 rounded-lg overflow-hidden">
-                        <img src="https://source.unsplash.com/random/300x200/?fantasy" alt="Content" class="w-full h-full object-cover">
-                    </div>
-                    <div class="content-card glass-card flex-shrink-0 w-40 h-24 rounded-lg overflow-hidden">
-                        <img src="https://source.unsplash.com/random/300x200/?fantasy" alt="Content" class="w-full h-full object-cover">
-                    </div>
-                    <div class="content-card glass-card flex-shrink-0 w-40 h-24 rounded-lg overflow-hidden">
-                        <img src="https://source.unsplash.com/random/300x200/?fantasy" alt="Content" class="w-full h-full object-cover">
-                    </div>
+                    <a href="overview-1.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://m.media-amazon.com/images/M/MV5BMThkYWY5ZjQtYjJlMS00MDFmLWFkYzEtODEzZjg5YWFmMGY4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+                                alt="Ant-Man Quantumania" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Ant-Man Quantumania</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="gog-3.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://m.media-amazon.com/images/M/MV5BOTJhOTMxMmItZmE0Ny00MDc3LWEzOGEtOGFkMzY4MWYyZDQ0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+                                alt="Guardians of the Galaxy Vol. 3" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Guardians of the Galaxy Vol. 3</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="overview-3.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://assets.gadgets360cdn.com/pricee/assets/product/202307/The_Marvels_Main_Poster_1690265619.jpg"
+                                alt="The Marvels" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">The Marvels</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="overview-4.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://m.media-amazon.com/images/M/MV5BZTk5ODY0MmQtMzA3Ni00NGY1LThiYzItZThiNjFiNDM4MTM3XkEyXkFqcGc@._V1_.jpg"
+                                alt="Deadpool & Wolverine" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Deadpool & Wolverine</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="overview-5.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://preview.redd.it/4-new-posters-for-captain-america-brave-new-world-v0-6ey1e31tekde1.jpg?width=640&crop=smart&auto=webp&s=90817072131b3aab7dc4868a4e67a4145d1b6990"
+                                alt="Captain America: Brave New World" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Captain America: Brave New World</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="overview-6.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://cdn.marvel.com/content/1x/thunderboltsposter.jpeg" alt="Thunderbolts*"
+                                class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Thunderbolts*</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Popular on the marvel -->
+        <!-- Phase 4 Movies -->
         <section class="mb-8">
-            <h2 class="text-lg font-bold mb-3 text-white">New Releases</h2>
+            <h2 class="text-lg font-bold mb-3 text-white">Phase 4 Movies</h2>
             <div class="relative">
                 <div class="flex space-x-3 overflow-x-auto pb-4 hide-scrollbar">
-                    <div class="content-card glass-card flex-shrink-0 w-28 h-40 rounded-lg overflow-hidden relative">
-                        <img src="https://source.unsplash.com/random/200x300/?new" alt="Content" class="w-full h-full object-cover">
-                        <div class="absolute top-2 right-2 new-badge text-white text-xs px-1 rounded">NEW</div>
-                    </div>
-                    <div class="content-card glass-card flex-shrink-0 w-28 h-40 rounded-lg overflow-hidden relative">
-                        <img src="https://source.unsplash.com/random/200x300/?release" alt="Content" class="w-full h-full object-cover">
-                        <div class="absolute top-2 right-2 new-badge text-white text-xs px-1 rounded">NEW</div>
-                    </div>
-                    <div class="content-card glass-card flex-shrink-0 w-28 h-40 rounded-lg overflow-hidden relative">
-                        <img src="https://source.unsplash.com/random/200x300/?premiere" alt="Content" class="w-full h-full object-cover">
-                        <div class="absolute top-2 right-2 new-badge text-white text-xs px-1 rounded">NEW</div>
-                    </div>
-                    <div class="content-card glass-card flex-shrink-0 w-28 h-40 rounded-lg overflow-hidden relative">
-                        <img src="https://source.unsplash.com/random/200x300/?hot" alt="Content" class="w-full h-full object-cover">
-                        <div class="absolute top-2 right-2 new-badge text-white text-xs px-1 rounded">NEW</div>
-                    </div>
+                    <a href="black-widow.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/e/e9/Black_Widow_%282021_film%29_poster.jpg"
+                                alt="Black Widow" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Black Widow</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="shang-chi.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://cdn.marvel.com/content/1x/shangchi_lob_crd_07.jpg" alt="Shang-Chi"
+                                class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Shang-Chi and the Legend of the Ten Rings</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="eternals.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://images.moviesanywhere.com/acdd3c73c67d756fb920845ad7c88c8f/eb62e721-3ce3-4ec0-b44c-1bd8bc073d87.jpg"
+                                alt="Eternals" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Eternals</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="nwh.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://m.media-amazon.com/images/M/MV5BMmFiZGZjMmEtMTA0Ni00MzA2LTljMTYtZGI2MGJmZWYzZTQ2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+                                alt="Spider-Man: No Way Home" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Spider-Man: No Way Home</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="docter-strange-2.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://i.ebayimg.com/images/g/Un8AAOSwN8Ficag9/s-l1200.jpg"
+                                alt="Doctor Strange 2" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Doctor Strange in the Multiverse of Madness</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="thor-4.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/88/Thor_Love_and_Thunder_poster.jpeg/250px-Thor_Love_and_Thunder_poster.jpeg"
+                                alt="Thor: Love and Thunder" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Thor: Love and Thunder</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="blackpanther-2.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://cdn.marvel.com/content/1x/blackpantherwakandaforever_lob_crd_06.jpg"
+                                alt="Black Panther: Wakanda Forever" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Black Panther: Wakanda Forever</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
 
+        <!-- Phase 3 Movies -->
         <section class="mb-8">
-            <h2 class="text-lg font-bold mb-3 text-white">Recommended For You</h2>
+            <h2 class="text-lg font-bold mb-3 text-white">Phase 3 Movies</h2>
             <div class="relative">
                 <div class="flex space-x-3 overflow-x-auto pb-4 hide-scrollbar">
-                    <div class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden">
-                        <img src="https://source.unsplash.com/random/250x350/?recommended" alt="Content" class="w-full h-full object-cover">
-                    </div>
-                    <div class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden">
-                        <img src="https://source.unsplash.com/random/250x350/?suggestion" alt="Content" class="w-full h-full object-cover">
-                    </div>
-                    <div class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden">
-                        <img src="https://source.unsplash.com/random/250x350/?pick" alt="Content" class="w-full h-full object-cover">
-                    </div>
-                    <div class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden">
-                        <img src="https://source.unsplash.com/random/250x350/?choice" alt="Content" class="w-full h-full object-cover">
-                    </div>
+                    <a href="captainA-3.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://m.media-amazon.com/images/I/91A7OAiNwWL._UF1000,1000_QL80_.jpg"
+                                alt="Captain America: Civil War" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Captain America: Civil War</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="docter-strange.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/a/a1/Doctor_Strange_%282016_film%29_poster.jpg"
+                                alt="Doctor Strange" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Doctor Strange</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="gog-2.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://m.media-amazon.com/images/M/MV5BNWE5MGI3MDctMmU5Ni00YzI2LWEzMTQtZGIyZDA5MzQzNDBhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+                                alt="Guardians of the Galaxy Vol. 2" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Guardians of the Galaxy Vol. 2</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="Homecoming.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://m.media-amazon.com/images/M/MV5BODY2MTAzOTQ4M15BMl5BanBnXkFtZTgwNzg5MTE0MjI@._V1_.jpg"
+                                alt="Spider-Man: Homecoming" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Spider-Man: Homecoming</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="thor-3.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://m.media-amazon.com/images/M/MV5BMjMyNDkzMzI1OF5BMl5BanBnXkFtZTgwODcxODg5MjI@._V1_FMjpg_UX1000_.jpg"
+                                alt="Thor: Ragnarok" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Thor: Ragnarok</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="blackpanther.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://lumiere-a.akamaihd.net/v1/images/p_blackpanther_19754_4ac13f07.jpeg"
+                                alt="Black Panther" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Black Panther</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="infinity-war.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_.jpg"
+                                alt="Avengers: Infinity War" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Avengers: Infinity War</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="antman.html">
+                        <div class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden oprogram="
+                            Ant-Man and the Wasp" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Ant-Man and the Wasp</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="captain-marvel.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://s3.amazonaws.com/com.marvel.terrigen/prod/captainmarvel_lob_crd_06.jpg"
+                                alt="Captain Marvel" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Captain Marvel</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="Endgame.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg"
+                                alt="Avengers: Endgame" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Avengers: Endgame</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="far-from-home.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://cdn.marvel.com/content/1x/sffh_venice-high-res.jpg"
+                                alt="Spider-Man: Far From Home" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Spider-Man: Far From Home</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phase 2 Movies -->
+        <section class="mb-8">
+            <h2 class="text-lg font-bold mb-3 text-white">Phase 2 Movies</h2>
+            <div class="relative">
+                <div class="flex space-x-3 overflow-x-auto pb-4 hide-scrollbar">
+                    <a href="ironman-3.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p9259486_p_v13_aa.jpg"
+                                alt="Iron Man 3" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Iron Man 3</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="thor-2.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p9530219_p_v13_aa.jpg"
+                                alt="Thor: The Dark World" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Thor: The Dark World</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="captainA-2.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://resizing.flixster.com/q1WXP8y1fsGp-AKkcg-M1b-LAX0=/fit-in/352x330/v2/https://resizing.flixster.com/2CoSopjMUIZqqEvFlv2Y6q1x5jw=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2ExMzBjYmRlLTg2MmQtNDFlYi04MDMwLTM3NTQxZWEzNjA3YS53ZWJw"
+                                alt="Captain America: The Winter Soldier" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Captain America: The Winter Soldier</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="gog-1.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://m.media-amazon.com/images/M/MV5BM2ZmNjQ2MzAtNDlhNi00MmQyLWJhZDMtNmJiMjFlOWY4MzcxXkEyXkFqcGc@._V1_.jpg"
+                                alt="Guardians of the Galaxy" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Guardians of the Galaxy</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="avengers-2.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://m.media-amazon.com/images/M/MV5BODBhYTg1NGQtNGVmNS00ZTdiLThjYTYtZDFkNzRiNTZmNDZjXkEyXkFqcGc@._V1_.jpg"
+                                alt="Avengers: Age of Ultron" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Avengers: Age of Ultron</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="antman-1.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/1/12/Ant-Man_%28film%29_poster.jpg"
+                                alt="Ant-Man" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Ant-Man</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phase 1 Movies -->
+        <section class="mb-8">
+            <h2 class="text-lg font-bold mb-3 text-white">Phase 1 Movies</h2>
+            <div class="relative">
+                <div class="flex space-x-3 overflow-x-auto pb-4 hide-scrollbar">
+                    <a href="ironman-1.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/poster/0/d/d/small-spos8825-poster-iron-man-1-a-official-sticker-sl-9829-wall-original-imaghs5pygznwxu9.jpeg?q=90&crop=false"
+                                alt="Iron Man" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Iron Man</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="hulk.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://i.pinimg.com/736x/76/a5/da/76a5dacd642d7bb242718d378fa0eb86.jpg"
+                                alt="The Incredible Hulk" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">The Incredible Hulk</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="ironman-2.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://images-cdn.ubuy.co.in/669b11479611960fa5028d98-marvel-cinematic-universe-iron-man-2.jpg"
+                                alt="Iron Man 2" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Iron Man 2</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="thor.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://rukminim2.flixcart.com/image/850/1000/av-media/movies/z/c/t/thor-original-imadz72hzu944yxz.jpeg?q=90&crop=false"
+                                alt="Thor" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Thor</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="captainA-1.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://m.media-amazon.com/images/M/MV5BNzUyM2YyY2MtNzNlMS00MWU5LTgxNjAtNzZlNmI2NjU2NDZlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+                                alt="Captain America: The First Avenger" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">Captain America: The First Avenger</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="avengers-1.html">
+                        <div
+                            class="content-card glass-card flex-shrink-0 w-36 h-52 rounded-lg overflow-hidden relative">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/8/8a/The_Avengers_%282012_film%29_poster.jpg"
+                                alt="The Avengers" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+                                <p class="text-xs text-gray-300">The Avengers</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Bottom Navigation -->
-    <nav class="fixed bottom-0 left-0 right-0 bg-black bg-opacity-90 backdrop-filter backdrop-blur-lg flex justify-around py-3 px-4 z-50 border-t border-gray-800">
-        <a href="home.html" class="flex flex-col items-center text-white text-xs">
-            <i class="fas fa-home text-lg mb-1"></i>
-            <span>Home</span>
-        </a>
-        <a href="#" class="flex flex-col items-center text-gray-400 text-xs hover:text-white transition">
-            <i class="fas fa-search text-lg mb-1"></i>
-            <span>Search</span>
-        </a>
-        <a href="animes.html" class="flex flex-col items-center text-gray-400 text-xs hover:text-white transition">
-            <i class="fas fa-compass text-lg mb-1"></i>
-            <span>Anime Shows</span>
-        </a>
-        <a href="#" class="flex flex-col items-center text-gray-400 text-xs hover:text-white transition">
-            <i class="fas fa-download text-lg mb-1"></i>
-            <span>Downloads</span>
-        </a>
-        <a href="#" class="flex flex-col items-center text-gray-400 text-xs hover:text-white transition">
-                <i class="fas fa-arrow-left text-lg mb-1"></i>
-                <span onclick="goBack()">Go Back</button></span>
-        </a>
-    </nav>
+
 
     <script>
         // Simple carousel functionality
         const carousels = document.querySelectorAll('[class*="flex space-x-3 overflow-x-auto"]');
-        
+
         carousels.forEach(carousel => {
             let isDown = false;
             let startX;
             let scrollLeft;
-            
+
             carousel.addEventListener('mousedown', (e) => {
                 isDown = true;
                 startX = e.pageX - carousel.offsetLeft;
                 scrollLeft = carousel.scrollLeft;
             });
-            
+
             carousel.addEventListener('mouseleave', () => {
                 isDown = false;
             });
-            
+
             carousel.addEventListener('mouseup', () => {
                 isDown = false;
             });
-            
+
             carousel.addEventListener('mousemove', (e) => {
-                if(!isDown) return;
+                if (!isDown) return;
                 e.preventDefault();
                 const x = e.pageX - carousel.offsetLeft;
                 const walk = (x - startX) * 2;
                 carousel.scrollLeft = scrollLeft - walk;
             });
         });
-        
+
         // Navigation active state
         const navItems = document.querySelectorAll('.nav-item');
-        
+
         navItems.forEach(item => {
             item.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -339,10 +647,11 @@
             });
         });
 
-        //back button
+        // Back button
         function goBack() {
             window.history.back();
         }
     </script>
 </body>
+
 </html>

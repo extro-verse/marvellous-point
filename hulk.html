@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marvel - Spider-Man: Homecoming</title>
+    <title>Marvel - The Incredible Hulk</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -24,26 +24,33 @@
             border-radius: 12px;
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
+
         .iframe {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+            }
+        
+        /* Custom scrollbar for WebKit browsers */
         ::-webkit-scrollbar {
             width: 6px;
             height: 6px;
         }
+        
         ::-webkit-scrollbar-track {
             background: #111;
             border-radius: 10px;
         }
+        
         ::-webkit-scrollbar-thumb {
             background: #333;
             border-radius: 10px;
         }
+        
         ::-webkit-scrollbar-thumb:hover {
             background: #444;
         }
+        
         .glass-card {
             background: rgba(30, 30, 30, 0.7);
             backdrop-filter: blur(10px);
@@ -52,6 +59,7 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
         }
+        
         .hero-gradient {
             background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.8) 100%);
         }
@@ -61,42 +69,54 @@
         .movie-poster {
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
+        
         .carousel-item {
             transition: transform 0.5s ease;
         }
+        
         .content-card:hover {
             transform: scale(1.05);
             transition: transform 0.3s ease;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
         }
+        
         .nav-item.active {
             border-bottom: 2px solid #fff;
         }
+        
         .profile-icon {
             transition: transform 0.3s ease;
         }
+        
         .profile-icon:hover {
             transform: scale(1.1);
         }
+        
         .search-bar {
             transition: all 0.3s ease;
         }
+        
         .search-bar:focus-within {
             width: 90%;
         }
+        
         .hide-scrollbar {
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+        
         .hide-scrollbar::-webkit-scrollbar {
             display: none;
         }
+        
         .progress-bar {
             background: #333;
         }
+        
         .progress-fill {
             background: linear-gradient(90deg, #555, #999);
         }
+        
         .new-badge {
             background: linear-gradient(90deg, #222, #444);
             border: 1px solid #666;
@@ -119,16 +139,16 @@
         <section class="relative rounded-xl overflow-hidden mb-6">
             <div class="aspect-video w-full bg-gradient-to-r flex items-center justify-center">
                 <img 
-                    src="https://upload.wikimedia.org/wikipedia/en/f/f9/Spider-Man_Homecoming_poster.jpg" 
-                    alt="Spider-Man: Homecoming Poster" 
+                    src="https://upload.wikimedia.org/wikipedia/en/6/69/Incredible_Hulk_poster.jpg" 
+                    alt="The Incredible Hulk Poster" 
                     class="absolute inset-0 w-full h-full object-cover opacity-80 transition-opacity duration-1000" 
                     id="poster"
                 >
                 <iframe 
                     id="trailer"
                     class="absolute inset-0 w-full h-full hidden"
-                    src="https://www.youtube.com/embed/rk-dF1lIbIg?autoplay=1&mute=1"
-                    title="Spider-Man: Homecoming Trailer"
+                    src="https://www.youtube.com/embed/xbqNb2PFKKA?autoplay=1&mute=1"
+                    title="The Incredible Hulk Trailer"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen
@@ -142,26 +162,26 @@
         <section class="mb-8">
             <div class="flex items-start mb-4">
                 <div class="movie-poster w-24 h-36 rounded-lg overflow-hidden mr-4">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/f/f9/Spider-Man_Homecoming_poster.jpg" alt="Spider-Man: Homecoming Poster" class="w-full h-full object-cover">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/6/69/Incredible_Hulk_poster.jpg" alt="The Incredible Hulk Poster" class="w-full h-full object-cover">
                 </div>
                 <div class="flex-1">
-                    <h1 class="text-2xl font-bold mb-1">Spider-Man: Homecoming</h1>
+                    <h1 class="text-2xl font-bold mb-1">The Incredible Hulk</h1>
                     <div class="flex items-center text-sm text-gray-300 mb-2">
-                        <span>2017</span>
+                        <span>2008</span>
                         <span class="mx-2">•</span>
                         <span>PG-13</span>
                         <span class="mx-2">•</span>
-                        <span>2h 13m</span>
+                        <span>1h 52m</span>
                     </div>
                     <div class="flex mb-3">
                         <span class="bg-white-800 text-gray-200 text-xs font-medium px-2.5 py-0.5 rounded mr-2">Action</span>
-                        <span class="bg-white-800 text-gray-200 text-xs font-medium px-2.5 py-0.5 rounded mr-2">Adventure</span>
                         <span class="bg-white-800 text-gray-200 text-xs font-medium px-2.5 py-0.5 rounded mr-2">Sci-fi</span>
+                        <span class="bg-white-800 text-gray-200 text-xs font-medium px-2.5 py-0.5 rounded mr-2">Adventure</span>
                     </div>
                     <div class="flex items-center">
                         <div class="flex items-center mr-4">
                             <i class="fas fa-star text-yellow-400 mr-1"></i>
-                            <span>7.4</span>
+                            <span>6.6</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-heart text-red-500 mr-1"></i>
@@ -174,7 +194,7 @@
             <div class="glassy-bg p-4 rounded-xl mb-4">
                 <h2 class="font-bold mb-2">Synopsis</h2>
                 <p class="text-gray-300 text-sm">
-                    Peter Parker, mentored by Tony Stark, balances high school life with his new role as Spider-Man. When the Vulture emerges as a threat, Peter must prove himself as a hero to protect his city.
+                    Dr. Bruce Banner, on the run and seeking a cure for his gamma-radiated condition, transforms into the Hulk when provoked. Pursued by the military and facing a monstrous foe, Banner must control his rage to save those he loves.
                 </p>
             </div>
 
@@ -213,22 +233,38 @@
 
         <!-- More Like This -->
         <section class="mb-6">
-            <h2 class="text-xl font-bold mb-3">More Spider-Man MCU Movies</h2>
+            <h2 class="text-xl font-bold mb-3">Marvel Cinematic Universe</h2>
             <div class="flex space-x-3 overflow-x-auto scroll-hidden pb-2">
-                <a href="spider-man-far-from-home.html">
+                <a href="overview-6.html">
                     <div class="flex-shrink-0 w-32">
                         <div class="aspect-[2/3] rounded-lg overflow-hidden">
-                            <img src="https://upload.wikimedia.org/wikipedia/en/b/bd/Spider-Man_Far_From_Home_poster.jpg" alt="Spider-Man: Far From Home Poster" class="w-full h-full object-cover">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/7/7d/Iron_Man_%28film%29_poster.jpg" alt="Iron Man Poster" class="w-full h-full object-cover">
                         </div>
-                        <p class="text-sm mt-1 truncate">Far From Home</p>
+                        <p class="text-sm mt-1 truncate">Iron Man</p>
                     </div>
                 </a>
-                <a href="spider-man-no-way-home.html">
+                <a href="overview-6.html">
                     <div class="flex-shrink-0 w-32">
                         <div class="aspect-[2/3] rounded-lg overflow-hidden">
-                            <img src="https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg" alt="Spider-Man: No Way Home Poster" class="w-full h-full object-cover">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Poster.jpg" alt="The Avengers Poster" class="w-full h-full object-cover">
                         </div>
-                        <p class="text-sm mt-1 truncate">No Way Home</p>
+                        <p class="text-sm mt-1 truncate">The Avengers</p>
+                    </div>
+                </a>
+                <a href="overview-6.html">
+                    <div class="flex-shrink-0 w-32">
+                        <div class="aspect-[2/3] rounded-lg overflow-hidden">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/d/d7/Thor_Ragnarok_poster.jpg" alt="Thor: Ragnarok Poster" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-sm mt-1 truncate">Ragnarok</p>
+                    </div>
+                </a>
+                <a href="overview-6.html">
+                    <div class="flex-shrink-0 w-32">
+                        <div class="aspect-[2/3] rounded-lg overflow-hidden">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/6/69/Incredible_Hulk_poster.jpg" alt="The Incredible Hulk Poster" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-sm mt-1 truncate">The Incredible Hulk</p>
                     </div>
                 </a>
             </div>
@@ -262,13 +298,15 @@
         setTimeout(() => {
             const poster = document.getElementById('poster');
             const trailer = document.getElementById('trailer');
+
             poster.classList.add('opacity-0');
             setTimeout(() => {
                 poster.style.display = 'none';
                 trailer.classList.remove('hidden');
             }, 1000);
-        }, 4000);
+        }, 4000); // show poster for 4 seconds
 
+        // Simple interaction for the like button
         document.addEventListener('DOMContentLoaded', function() {
             const likeBtn = document.querySelector('.fa-heart').parentElement;
             let like = false;
@@ -287,11 +325,13 @@
                 }
             });
             
+            // Simulate loading animation
             setTimeout(() => {
                 document.querySelector('main').style.opacity = '1';
             }, 300);
         });
 
+        // Back button
         function goBack() {
             window.history.back();
         }

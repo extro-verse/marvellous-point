@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marvel - Spider-Man: Homecoming</title>
+    <title>Marvel - Agatha All Along</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -58,7 +58,7 @@
         .scroll-hidden::-webkit-scrollbar {
             display: none;
         }
-        .movie-poster {
+        .series-poster {
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
         .carousel-item {
@@ -119,16 +119,16 @@
         <section class="relative rounded-xl overflow-hidden mb-6">
             <div class="aspect-video w-full bg-gradient-to-r flex items-center justify-center">
                 <img 
-                    src="https://upload.wikimedia.org/wikipedia/en/f/f9/Spider-Man_Homecoming_poster.jpg" 
-                    alt="Spider-Man: Homecoming Poster" 
+                    src="https://www.themoviedb.org/t/p/original/8V4aDHbgrs5sHBN9V5W2DKp7ewm.jpg" 
+                    alt="Agatha All Along Poster" 
                     class="absolute inset-0 w-full h-full object-cover opacity-80 transition-opacity duration-1000" 
                     id="poster"
                 >
                 <iframe 
                     id="trailer"
                     class="absolute inset-0 w-full h-full hidden"
-                    src="https://www.youtube.com/embed/rk-dF1lIbIg?autoplay=1&mute=1"
-                    title="Spider-Man: Homecoming Trailer"
+                    src="https://www.youtube.com/embed/7vnADVsdQ5?autoplay=1&mute=1"
+                    title="Agatha All Along Trailer"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen
@@ -138,30 +138,30 @@
             </div>
         </section>
 
-        <!-- Movie Info -->
+        <!-- Series Info -->
         <section class="mb-8">
             <div class="flex items-start mb-4">
-                <div class="movie-poster w-24 h-36 rounded-lg overflow-hidden mr-4">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/f/f9/Spider-Man_Homecoming_poster.jpg" alt="Spider-Man: Homecoming Poster" class="w-full h-full object-cover">
+                <div class="series-poster w-24 h-36 rounded-lg overflow-hidden mr-4">
+                    <img src="https://www.themoviedb.org/t/p/original/8V4aDHbgrs5sHBN9V5W2DKp7ewm.jpg" alt="Agatha All Along Poster" class="w-full h-full object-cover">
                 </div>
                 <div class="flex-1">
-                    <h1 class="text-2xl font-bold mb-1">Spider-Man: Homecoming</h1>
+                    <h1 class="text-2xl font-bold mb-1">Agatha All Along</h1>
                     <div class="flex items-center text-sm text-gray-300 mb-2">
-                        <span>2017</span>
+                        <span>2024</span>
                         <span class="mx-2">•</span>
-                        <span>PG-13</span>
+                        <span>TV-14</span>
                         <span class="mx-2">•</span>
-                        <span>2h 13m</span>
+                        <span>9 episodes (~6h)</span>
                     </div>
                     <div class="flex mb-3">
                         <span class="bg-white-800 text-gray-200 text-xs font-medium px-2.5 py-0.5 rounded mr-2">Action</span>
                         <span class="bg-white-800 text-gray-200 text-xs font-medium px-2.5 py-0.5 rounded mr-2">Adventure</span>
-                        <span class="bg-white-800 text-gray-200 text-xs font-medium px-2.5 py-0.5 rounded mr-2">Sci-fi</span>
+                        <span class="bg-white-800 text-gray-200 text-xs font-medium px-2.5 py-0.5 rounded mr-2">Comedy</span>
                     </div>
                     <div class="flex items-center">
                         <div class="flex items-center mr-4">
                             <i class="fas fa-star text-yellow-400 mr-1"></i>
-                            <span>7.4</span>
+                            <span>7.2</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-heart text-red-500 mr-1"></i>
@@ -174,7 +174,7 @@
             <div class="glassy-bg p-4 rounded-xl mb-4">
                 <h2 class="font-bold mb-2">Synopsis</h2>
                 <p class="text-gray-300 text-sm">
-                    Peter Parker, mentored by Tony Stark, balances high school life with his new role as Spider-Man. When the Vulture emerges as a threat, Peter must prove himself as a hero to protect his city.
+                    Agatha Harkness, freed from a spell by a mysterious teen, embarks on the Witches' Road trials to reclaim her powers. Joined by a coven of witches, they face dangerous challenges and hidden motives, uncovering secrets in a darkly whimsical journey.
                 </p>
             </div>
 
@@ -183,7 +183,7 @@
                 <div class="grid grid-cols-2 gap-2 text-sm">
                     <div>
                         <p class="text-gray-400">Channel</p>
-                        <p class="text-gray-300">Marvel Tamil Official</p>
+                        <p class="text-gray-300">Disney+</p>
                     </div>
                     <div>
                         <p class="text-gray-400">Quality</p>
@@ -191,7 +191,7 @@
                     </div>
                     <div>
                         <p class="text-gray-400">Audio</p>
-                        <p class="text-gray-300">Tamil, Telugu, Malayalam, Hindi, English, Español, Français</p>
+                        <p class="text-gray-300">English, Español, Français</p>
                     </div>
                     <div>
                         <p class="text-gray-400">Subtitles</p>
@@ -213,27 +213,28 @@
 
         <!-- More Like This -->
         <section class="mb-6">
-            <h2 class="text-xl font-bold mb-3">More Spider-Man MCU Movies</h2>
+            <h2 class="text-xl font-bold mb-3">More MCU Series</h2>
             <div class="flex space-x-3 overflow-x-auto scroll-hidden pb-2">
-                <a href="spider-man-far-from-home.html">
+                <a href="wandavision.html">
                     <div class="flex-shrink-0 w-32">
                         <div class="aspect-[2/3] rounded-lg overflow-hidden">
-                            <img src="https://upload.wikimedia.org/wikipedia/en/b/bd/Spider-Man_Far_From_Home_poster.jpg" alt="Spider-Man: Far From Home Poster" class="w-full h-full object-cover">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/8/83/WandaVision_poster.jpg" alt="WandaVision Poster" class="w-full h-full object-cover">
                         </div>
-                        <p class="text-sm mt-1 truncate">Far From Home</p>
+                        <p class="text-sm mt-1 truncate">WandaVision</p>
                     </div>
                 </a>
-                <a href="spider-man-no-way-home.html">
+                <a href="loki.html">
                     <div class="flex-shrink-0 w-32">
                         <div class="aspect-[2/3] rounded-lg overflow-hidden">
-                            <img src="https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg" alt="Spider-Man: No Way Home Poster" class="w-full h-full object-cover">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/9/94/Loki_%28TV_series%29_logo.png" alt="Loki Poster" class="w-full h-full object-cover">
                         </div>
-                        <p class="text-sm mt-1 truncate">No Way Home</p>
+                        <p class="text-sm mt-1 truncate">Loki</p>
                     </div>
                 </a>
             </div>
         </section>        
     </main>
+
     <!-- Bottom Navigation -->
     <nav class="fixed bottom-0 left-0 right-0 bg-black bg-opacity-90 backdrop-filter backdrop-blur-lg flex justify-around py-3 px-4 z-50 border-t border-gray-800">
         <a href="home.html" class="flex flex-col items-center text-white text-xs">
@@ -252,7 +253,7 @@
             <i class="fa fa-download text-lg mb-1"></i>
             <span>Channel</span>
         </a>
-        <a href="home.html" class="flex flex-col items-center text-gray-400 text-xs hover:text-white transition">
+        <a href="series.html" class="flex flex-col items-center text-gray-400 text-xs hover:text-white transition">
             <i class="fas fa-arrow-left text-lg mb-1"></i>
             <span onclick="goBack()">Go Back</span>
         </a>
@@ -269,35 +270,16 @@
             }, 1000);
         }, 4000);
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const likeBtn = document.querySelector('.fa-heart').parentElement;
-            let like = false;
-            
-            likeBtn.addEventListener('click', function() {
-                like = !like;
-                const heartIcon = this.querySelector('.fa-heart');
-                const likeText = this.querySelector('span:last-child');
-                
-                if (like) {
-                    heartIcon.style.color = '#ef4444';
-                    likeText.textContent = 'Liked';
-                } else {
-                    heartIcon.style.color = 'gray';
-                    likeText.textContent = 'Like';
-                }
-            });
-            
-            setTimeout(() => {
-                document.querySelector('main').style.opacity = '1';
-            }, 300);
-        });
+        setTimeout(() => {
+            document.querySelector('main').style.opacity = '1';
+        }, 300);
 
         function goBack() {
             window.history.back();
         }
 
         document.getElementById("Buttonone").onclick = function() {
-            window.location.href = "https://t.me/Marvel_Tamil_Official";
+            window.location.href = "https://www.disneyplus.com/series/agatha-all-along/5Y7k1B5ZfIwc";
         };
 
         document.getElementById("Buttontwo").onclick = function() {
