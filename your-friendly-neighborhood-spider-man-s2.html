@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel - Your Friendly Neighborhood Spider-Man Season 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #000;
+            min-height: 100vh;
+            color: white;
+            scrollbar-width: thin;
+            scrollbar-color: #333 #111;
+        }
+        .glassy-bg {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .iframe {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #444;
+        }
+        .glass-card {
+            background: rgba(30, 30, 30, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%, transparent);
+        }
+        .scroll-hidden::-webkit-scrollbar {
+            display: none;
+        }
+        .movie-poster {
+            box-shadow: 0 25px 15px -10px rgba(0, 0, 0, 0.5);
+        }
+        .carousel-item {
+            transition: transform 0.3s ease;
+        }
+        .content-card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 255, 0.3);
+        }
+        .nav-item.active {
+            border-bottom: 2px solid #fff;
+        }
+        .profile-button {
+            transition: transform 0.3s ease;
+        }
+        .profile-button:hover {
+            transform: scale(1.1);
+        }
+        .search-bar {
+            transition: width 0.3s ease;
+        }
+        .search-bar:hover {
+            width: 250px;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .progress-bar {
+            background: #333;
+        }
+        .progress-fill {
+            background: linear-gradient(to-r, #4a90e2, #9016fe);
+        }
+        .new-item {
+            background: linear-gradient(to-r, #222, #444);
+            border: 1px solid #666;
+        }
+    </style>
+</head>
+<body class="relative">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 px-4 py-4 flex justify-between items-center bg-black bg-opacity-80 backdrop-filter backdrop-blur-lg">
+        <div class="flex items-center">
+            <div class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-600 bg-clip-text text-transparent">
+                Marvel Index
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20 pb-4">
+        <!-- Hero Section -->
+        <section class="container mx-auto px-4 relative rounded-xl overflow-hidden mb-6">
+            <div class="aspect-video w-full bg-hero-gradient">
+                <img 
+                    src="https://via.placeholder.com/1200x675?text=Your+Friendly+Neighborhood+Spider-Man+S2" 
+                    alt="Your Friendly Neighborhood Spider-Man Season 2 Poster" 
+                    class="absolute inset-0 w-full h-full object-cover opacity-80 transition-opacity duration-300" 
+                    id="poster"
+                >
+                <iframe 
+                    id="trailer"
+                    class="absolute inset-0 w-full h-full hidden object-cover"
+                    src="https://www.youtube.com/embed/placeholder?autoplay=1&mute=1"
+                    title="Your Friendly Neighborhood Spider-Man Season 2 Trailer"
+                    frameborder="0"
+                    allow="autoplay"
+                    allowfullscreen
+                    referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+                <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
+            </div>
+        </section>
+
+        <!-- Series Info -->
+        <section class="container mx-auto px-4 mb-8">
+            <div class="flex items-center mb-4">
+                <div class="movie-poster w-20 h-32 rounded mr-4">
+                    <img src="https://via.placeholder.com/150x225?text=Spider-Man+S2" alt="Your Friendly Neighborhood Spider-Man Season 2 Poster" class="w-full h-full object-cover rounded">
+                </div>
+                <div class="flex-1">
+                    <h1 class="text-2xl font-bold mb-1">Your Friendly Neighborhood Spider-Man S2</h1>
+                    <div class="flex items-center text-sm text-gray-400 mb-2">
+                        <span>TBA</span>
+                        <span class="mx-2">•</span>
+                        <span>TV-Y7</span>
+                        <span class="mx-2">•</span>
+                        <span>Season 2, TBD Episodes</span>
+                    </div>
+                    <div class="flex mb-3">
+                        <span class="bg-gray-700 text-xs font-medium text-gray-300 px-2 py-0.5 rounded mr-1">Animation</span>
+                        <span class="bg-gray-700 text-xs font-medium text-gray-300 px-2 py-0.5 rounded mr-1">Action</span>
+                        <span class="bg-gray-700 text-xs font-medium text-gray-300 px-2 py-0.5 rounded">Adventure</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="flex items-center mr-4">
+                            <i class="fas fa-star text-yellow-500 mr-1"></i>
+                            <span>TBA</span>
+                        </div>
+                        <div class="flex items-center cursor-pointer">
+                            <i class="fas fa-heart text-red-400 mr-1"></i>
+                            <span>Like</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glassy-bg p-4 rounded-lg mb-4">
+                <h2 class="font-semibold text-lg mb-1">Synopsis</h2>
+                <p class="text-sm text-gray-400">
+                    Continuing Peter Parker’s high school adventures, Season 2 of *Your Friendly Neighborhood Spider-Man* follows the young hero as he balances school, relationships, and crime-fighting. With new villains and allies, including Norman Osborn and potentially Tony Stark, Peter faces bigger challenges in this animated series set in an alternate MCU timeline.
+                </p>
+            </div>
+
+            <div class="glassy-bg p-4 rounded-lg">
+                <h2 class="font-semibold text-lg mb-1">Details</h2>
+                <div class="grid grid-cols-2 gap-2 text-xs">
+                    <div>
+                        <p class="text-gray-500">Channel</p>
+                        <p class="text-gray-300">Disney+</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500">Quality</p>
+                        <p class="text-gray-300">4K, 1080p, 720p</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500">Audio</p>
+                        <p class="text-gray-300">English, Spanish, French</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500">Subtitles</p>
+                        <p class="text-gray-300">English, Spanish, 10+ more</p>
+                    </div>
+                </div>
+            </div>
+            <div class="glassy-bg p-4 rounded-lg mt-3 flex space-x-4">
+                <button id="Buttonone" class="relative px-4 py-2 text-sm font-medium rounded-lg text-white bg-blue-600/30 hover:bg-blue-600/50 transition-all duration-200">
+                    <span class="relative">Access</span>
+                </button>
+                <button id="Buttontwo" class="relative px-4 py-2 text-sm font-medium rounded-lg text-white bg-blue-600/30 hover:bg-blue-600/50 transition-all duration-200">
+                    <span class="relative">Download</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- More Like This -->
+        <section class="container mx-auto px-4">
+            <h2 class="text-lg font-semibold mb-3">More Marvel Animation</h2>
+            <div class="flex space-x-4 overflow-x-auto hide-scrollbar pb-2">
+                <a href="marvel_zombies.html">
+                    <div class="flex-shrink-0 w-28">
+                        <div class="aspect-[2/3] rounded overflow-hidden">
+                            <img src="https://via.placeholder.com/150x225?text=Marvel+Zombies" alt="Marvel Zombies" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-xs mt-1 truncate">Marvel Zombies</p>
+                    </div>
+                </a>
+                <a href="modok.html">
+                    <div class="flex-shrink-0 w-28">
+                        <div class="aspect-[2/3] rounded overflow-hidden">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/8/8e/Marvel%27s_MODOK_poster.jpg" alt="MODOK" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-xs mt-1 truncate">Marvel Anime: MODOK</p>
+                    </div>
+                </a>
+                <a href="hit_monkey.html">
+                    <div class="flex-shrink-0 w-28">
+                        <div class="aspect-[2/3] rounded overflow-hidden">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/0/0f/Marvel%27s_Hit-Monkey_poster.jpg" alt="Hit Monkey" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-xs mt-1 truncate">Marvel Anime: Hit-Monkey</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="flex-shrink-0 w-28">
+                        <div class="aspect-[2/3] rounded overflow-hidden">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/5/5c/What_If_Logo.png" alt="What If?" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-xs mt-1 truncate">What If...?</p>
+                    </div>
+                </a>
+            </div>
+        </section>        
+    </main>
+
+    <!-- Navigation -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-black bg-opacity-80 backdrop-filter backdrop-blur-lg flex justify-around py-3 z-50 border-t border-gray-200/10">
+        <a href="/" class="flex flex-col items-center text-gray-400 hover:text-white text-xs transition">
+            <i class="fas fa-home text-lg mb-1"></i>
+            <span>Home</span>
+        </a>
+        <a href="https://t.me/Xnoverse_bot" class="flex flex-col items-center text-gray-400 hover:text-white text-xs transition">
+            <i class="fas fa-cog text-lg mb-1"></i>
+            <span>Access</span>
+        </a>
+        <a href="/animes" class="flex flex-col items-center text-gray-400 hover:text-white text-xs transition">
+            <i class="fas fa-compass text-lg mb-1"></i>
+            <span>Shows</span>
+        </a>
+        <a href="https://t.me/MX" class="flex flex-col items-center text-gray-400 hover:text-white text-xs transition">
+            <i class="fas fa-download text-lg mb-1"></i>
+            <span>Channel</span>
+        </a>
+        <a href="#" class="flex flex-col items-center text-gray-400 hover:text-white text-xs transition" onclick="history.back()">
+            <i class="fas fa-arrow-left text-lg mb-1"></i>
+            <span>Go Back</span>
+        </a>
+    </nav>
+
+    <script>
+        setTimeout(() => {
+            const poster = document.getElementById('poster');
+            const trailer = document.getElementById('trailer');
+            if (poster && trailer) {
+                poster.classList.add('opacity-0');
+                setTimeout(() => {
+                    poster.style.display = 'none';
+                    trailer.classList.remove('hidden');
+                }, 250);
+            }
+        }, 1000);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const likeBtn = document.querySelector('.cursor-pointer');
+            let liked = false;
+            if (likeBtn) {
+                likeBtn.addEventListener('click', () => {
+                    liked = !liked;
+                    const heart = likeBtn.querySelector('i');
+                    const text = likeBtn.querySelector('span');
+                    heart.className = `fas fa-heart text-${liked ? 'red-600' : 'red-400'} mr-1`;
+                    text.textContent = liked ? 'Liked' : 'Like';
+                });
+            }
+
+            setTimeout(() => {
+                document.querySelector('main').classList.add('opacity-100');
+            }, 100);
+        });
+
+        document.getElementById('Buttonone').onclick = () => {
+            location.href = 'https://t.me/Marvel_Tamil_Official';
+        };
+
+        document.getElementById('Buttontwo').onclick = () => {
+            location.href = 'https://t.me/Marvelveriyans';
+        };
+    </script>
+</body>
+</html>
