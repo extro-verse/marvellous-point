@@ -133,7 +133,7 @@
 <body class="relative overflow-x-hidden text-white font-sans">
     <!-- Header -->
     <header
-        class="fixed top-0 left-0 right-0 z-50 px-4 py-3 flex justify-between items-center bg-black bg-opacity-90 backdrop-filter backdrop-blur-lg"> 
+        class="fixed top-0 left-0 right-0 z-50 px-4 py-3 flex justify-between items-center bg-black bg-opacity-90 backdrop-filter backdrop-blur-lg">
         <div class="flex items-center">
             <div class="text-2xl font-bold bg-gradient-to-r from-gray-300 to-gray-100 bg-clip-text text-transparent">
                 Marvel Index
@@ -168,7 +168,9 @@
                             <div class="flex space-x-3">
                                 <button
                                     class="bg-white text-black px-4 py-1 rounded-full text-sm font-semibold flex items-center hover:bg-gray-200 transition">
-                                    <i class="fas fa-play mr-2"></i><a href="https://t.me/X9vR3qLz_bot?start=d1fde3fc-34f7-4f6b-bf61-3afd2c24a289">Now Streaming</a>
+                                    <i class="fas fa-play mr-2"></i><a
+                                        href="https://t.me/X9vR3qLz_bot?start=d1fde3fc-34f7-4f6b-bf61-3afd2c24a289">Now
+                                        Streaming</a>
                                 </button>
                                 <button
                                     class="glass-card px-4 py-1 rounded-full text-sm font-semibold flex items-center text-white hover:bg-gray-800 transition">
@@ -212,7 +214,9 @@
                             <div class="flex space-x-3">
                                 <button
                                     class="bg-white text-black px-4 py-1 rounded-full text-sm font-semibold flex items-center hover:bg-gray-200 transition">
-                                    <i class="fas fa-play mr-2"></i><a href="https://t.me/X9vR3qLz_bot?start=f846bd81-07af-486d-a459-1e7c039378d7">Now Streaming</a>
+                                    <i class="fas fa-play mr-2"></i><a
+                                        href="https://t.me/X9vR3qLz_bot?start=3fe03e69-66a7-48e4-ba67-5c177c9cd3af">Now
+                                        Streaming</a>
                                 </button>
                                 <button
                                     class="glass-card px-4 py-1 rounded-full text-sm font-semibold flex items-center text-white hover:bg-gray-800 transition">
@@ -229,12 +233,13 @@
         <!-- Navigation -->
         <nav class="flex overflow-x-auto pb-2 mb-4 hide-scrollbar">
             <div class="flex space-x-4">
-                <a href="#"
+                <a href="index.html"
                     class="nav-item active px-3 py-2 text-sm font-medium whitespace-nowrap text-white"><b>Home</b></a>
-                <a href="#" class="px-3 py-2 text-sm font-medium whitespace-nowrap text-gray-400">Tv
+                <a href="series.html" class="px-3 py-2 text-sm font-medium whitespace-nowrap text-gray-400">Tv
                     Shows</a>
-                <a href="#" class="px-3 py-2 text-sm font-medium whitespace-nowrap text-gray-400">Movies</a>
-                <a href="#" class="px-3 py-2 text-sm font-medium whitespace-nowrap text-gray-400">Originals</a>
+                <a href="movies.html" class="px-3 py-2 text-sm font-medium whitespace-nowrap text-gray-400">Movies</a>
+                <a href="originals.html"
+                    class="px-3 py-2 text-sm font-medium whitespace-nowrap text-gray-400">Originals</a>
                 <!-- <a href="suggestions.html"
                     class="px-3 py-2 text-sm font-medium whitespace-nowrap text-gray-400 hover:text-white transition">Suggestions</a>
             </div> -->
@@ -499,7 +504,8 @@
             <i class="fas fa-home text-lg mb-1"></i>
             <span>Home</span>
         </a>
-        <a href="#" class="flex flex-col items-center text-gray-400 text-xs hover:text-white transition">
+        <a href="https://t.me/X9vR3qLz_bot"
+            class="flex flex-col items-center text-gray-400 text-xs hover:text-white transition">
             <i class="fa fa-cog text-lg mb-1"></i>
             <span>Access</span>
         </a>
@@ -520,19 +526,566 @@
 
     <script>
         const movies = [
-            { title: "Captain America: Brave New World", file: "brave-new-world.html", poster: "https://preview.redd.it/4-new-posters-for-captain-america-brave-new-world-v0-6ey1e31tekde1.jpg?width=640&crop=smart&auto=webp&s=90817072131b3aab7dc4868a4e67a4145d1b6990" },
-            { title: "Thunderbolts*", file: "overview-6.html", poster: "https://cdn.marvel.com/content/1x/thunderboltsposter.jpeg" },
-            { title: "Blade: Trinity", file: "blade-trinity.html", poster: "https://www.themoviedb.org/t/p/original/lI41j7OlvV06B1sY4U0D1v49Cqr.jpg" },
-            { title: "Hulk", file: "hulk-2003.html", poster: "https://www.themoviedb.org/t/p/original/xnPqMQ84Tj0qQ3Mo7pO9VRS5t4m.jpg" },
-            { title: "The Punisher", file: "punisher-2004.html", poster: "https://www.themoviedb.org/t/p/original/z2yRfiG2XPFgq2uC8Wv5i9u8ZRW.jpg" },
-            { title: "Punisher: War Zone", file: "punisher-war-zone.html", poster: "https://www.themoviedb.org/t/p/original/eM6u4oY1s4CggBfeBgoB9prYg3K.jpg" },
-            { title: "Ghost Rider", file: "ghost-rider.html", poster: "https://www.themoviedb.org/t/p/original/8LaVQiXA3uZ7gH4cQ7P8KuA6HKg.jpg" },
-            { title: "Ghost Rider: Spirit of Vengeance", file: "ghost-rider-spirit.html", poster: "https://www.themoviedb.org/t/p/original/7eT1qEfMzV5tYx8S3b6K2fUAi0C.jpg" },
-            { title: "Ant-Man and the Wasp: Quantumania", file: "ant-man-wasp-quantumania.html", poster: "https://www.themoviedb.org/t/p/original/ngl2FKBlH1C7yLShRNHH6f7203t.jpg" },
-            { title: "Guardians of the Galaxy Vol. 3", file: "guardians-galaxy-3.html", poster: "https://www.themoviedb.org/t/p/original/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg" },
-            { title: "The Marvels", file: "the-marvels.html", poster: "https://www.themoviedb.org/t/p/original/9GBhzXMFjgcZ3w5a9IVh6K1nl0r.jpg" },
-            { title: "Deadpool & Wolverine", file: "deadpool-wolverine.html", poster: "https://www.themoviedb.org/t/p/original/rzRwTcFVc1bJUFppFd3l8ks1Lva.jpg" },
-            { title: "Echo", file: "echo.html", poster: "https://www.themoviedb.org/t/p/original/6KHamx4x2J8I4i0jZ8G1P0y4gpn.jpg" }
+            {
+                "title": "Iron Man",
+                "file": "iron-man.html",
+                "poster": "https://www.themoviedb.org/t/p/original/78lPtwv72eTNqFW9COBYI0dWDJa.jpg"
+            },
+            {
+                "title": "The Incredible Hulk",
+                "file": "the-incredible-hulk.html",
+                "poster": "https://www.themoviedb.org/t/p/original/gKzYx79y0AQTL4UAk1cBQJ3nvrm.jpg"
+            },
+            {
+                "title": "Iron Man 2",
+                "file": "iron-man-2.html",
+                "poster": "https://www.themoviedb.org/t/p/original/6WBeq4fCfn7AN0o21W9qNcRF2l9.jpg"
+            },
+            {
+                "title": "Thor",
+                "file": "thor.html",
+                "poster": "https://www.themoviedb.org/t/p/original/prSfAi1xGrhLQNxVSUFh61xQ4Qy.jpg"
+            },
+            {
+                "title": "Captain America: The First Avenger",
+                "file": "captain-america-the-first-avenger.html",
+                "poster": "https://www.themoviedb.org/t/p/original/vSNxAJTlD0r02V9sPYpOjqDZXUK.jpg"
+            },
+            {
+                "title": "The Avengers",
+                "file": "the-avengers.html",
+                "poster": "https://www.themoviedb.org/t/p/original/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg"
+            },
+            {
+                "title": "Iron Man 3",
+                "file": "iron-man-3.html",
+                "poster": "https://www.themoviedb.org/t/p/original/qhPtAc1TKbMPqNvcdXSOn9Bn7hZ.jpg"
+            },
+            {
+                "title": "Thor: The Dark World",
+                "file": "thor-the-dark-world.html",
+                "poster": "https://www.themoviedb.org/t/p/original/wp6OxE4poJ4G7c0U2ZIXasTSMR7.jpg"
+            },
+            {
+                "title": "Captain America: The Winter Soldier",
+                "file": "captain-america-the-winter-soldier.html",
+                "poster": "https://www.themoviedb.org/t/p/original/tVFRpFw3xTedgPGqxW0AOI8Qhh0.jpg"
+            },
+            {
+                "title": "Guardians of the Galaxy",
+                "file": "guardians-of-the-galaxy.html",
+                "poster": "https://www.themoviedb.org/t/p/original/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg"
+            },
+            {
+                "title": "Avengers: Age of Ultron",
+                "file": "avengers-age-of-ultron.html",
+                "poster": "https://www.themoviedb.org/t/p/original/t90Y3G8UGQp0f0DrP60wRu9gfrH.jpg"
+            },
+            {
+                "title": "Ant-Man",
+                "file": "ant-man.html",
+                "poster": "https://www.themoviedb.org/t/p/original/D6e8RJf2qUstnfkTslTXNTUAlT.jpg"
+            },
+            {
+                "title": "Captain America: Civil War",
+                "file": "captain-america-civil-war.html",
+                "poster": "https://www.themoviedb.org/t/p/original/rAGiXaUfPzY7CDEyNKUofk3Kw2e.jpg"
+            },
+            {
+                "title": "Doctor Strange",
+                "file": "doctor-strange.html",
+                "poster": "https://www.themoviedb.org/t/p/original/uGBVj3bEbCoZbDjjl9wTxcygko1.jpg"
+            },
+            {
+                "title": "Guardians of the Galaxy Vol. 2",
+                "file": "guardians-of-the-galaxy-vol-2.html",
+                "poster": "https://www.themoviedb.org/t/p/original/y4MBh0EjBlMuOzv9axM4qJlmhzz.jpg"
+            },
+            {
+                "title": "Spider-Man: Homecoming",
+                "file": "spider-man-homecoming.html",
+                "poster": "https://www.themoviedb.org/t/p/original/c24sv2weTHPsmDa7jEMN0m2P3RT.jpg"
+            },
+            {
+                "title": "Thor: Ragnarok",
+                "file": "thor-ragnarok.html",
+                "poster": "https://www.themoviedb.org/t/p/original/rzRwTcFVc1bJUFppFd3l8ks1Lva.jpg"
+            },
+            {
+                "title": "Black Panther",
+                "file": "black-panther.html",
+                "poster": "https://www.themoviedb.org/t/p/original/uxzzxijgPIY7slzFvMotPv8wjKA.jpg"
+            },
+            {
+                "title": "Avengers: Infinity War",
+                "file": "avengers-infinity-war.html",
+                "poster": "https://www.themoviedb.org/t/p/original/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
+            },
+            {
+                "title": "Ant-Man and the Wasp",
+                "file": "ant-man-and-the-wasp.html",
+                "poster": "https://www.themoviedb.org/t/p/original/eivQmS3wqzqnQWILHLc4FsEfcXP.jpg"
+            },
+            {
+                "title": "Captain Marvel",
+                "file": "captain-marvel.html",
+                "poster": "https://www.themoviedb.org/t/p/original/AtsgWhDnHTq68L0lLsUrCnM7TjG.jpg"
+            },
+            {
+                "title": "Avengers: Endgame",
+                "file": "avengers-endgame.html",
+                "poster": "https://www.themoviedb.org/t/p/original/or06FN3Dka5tukK1e9sl16pB3iy.jpg"
+            },
+            {
+                "title": "Spider-Man: Far From Home",
+                "file": "spider-man-far-from-home.html",
+                "poster": "https://www.themoviedb.org/t/p/original/4q2NNj4S5dG2RLF9CpXsej7yXl.jpg"
+            },
+            {
+                "title": "Black Widow",
+                "file": "black-widow.html",
+                "poster": "https://www.themoviedb.org/t/p/original/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg"
+            },
+            {
+                "title": "Shang-Chi and the Legend of the Ten Rings",
+                "file": "shang-chi-and-the-legend-of-the-ten-rings.html",
+                "poster": "https://www.themoviedb.org/t/p/original/1BIoJGKbXjdFDAqUEiA2VHqkK1Z.jpg"
+            },
+            {
+                "title": "Eternals",
+                "file": "eternals.html",
+                "poster": "https://www.themoviedb.org/t/p/original/b6qUu00iIIkXX13szFy7d0CyNcg.jpg"
+            },
+            {
+                "title": "Spider-Man: No Way Home",
+                "file": "spider-man-no-way-home.html",
+                "poster": "https://www.themoviedb.org/t/p/original/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg"
+            },
+            {
+                "title": "Doctor Strange in the Multiverse of Madness",
+                "file": "doctor-strange-in-the-multiverse-of-madness.html",
+                "poster": "https://www.themoviedb.org/t/p/original/61PVJ06oecwvcBisoAQu6SDfdcS.jpg"
+            },
+            {
+                "title": "Thor: Love and Thunder",
+                "file": "thor-love-and-thunder.html",
+                "poster": "https://www.themoviedb.org/t/p/original/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg"
+            },
+            {
+                "title": "Black Panther: Wakanda Forever",
+                "file": "black-panther-wakanda-forever.html",
+                "poster": "https://www.themoviedb.org/t/p/original/sv1xJUazXeYqALzczSZ3O6nkH75.jpg"
+            },
+            {
+                "title": "Ant-Man and the Wasp: Quantumania",
+                "file": "ant-man-and-the-wasp-quantumania.html",
+                "poster": "https://www.themoviedb.org/t/p/original/ngl2FKBlH1C7yLShRNHH6f7203t.jpg"
+            },
+            {
+                "title": "Guardians of the Galaxy Vol. 3",
+                "file": "guardians-of-the-galaxy-vol-3.html",
+                "poster": "https://www.themoviedb.org/t/p/original/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg"
+            },
+            {
+                "title": "The Marvels",
+                "file": "the-marvels.html",
+                "poster": "https://www.themoviedb.org/t/p/original/9GBhzXMFjgcZ3w5a9IVh6K1nl0r.jpg"
+            },
+            {
+                "title": "Deadpool & Wolverine",
+                "file": "deadpool-and-wolverine.html",
+                "poster": "https://www.themoviedb.org/t/p/original/rzRwTcFVc1bJUFppFd3l8ks1Lva.jpg"
+            },
+            {
+                "title": "Captain America: Brave New World",
+                "file": "captain-america-brave-new-world.html",
+                "poster": "https://preview.redd.it/4-new-posters-for-captain-america-brave-new-world-v0-6ey1e31tekde1.jpg?width=640&crop=smart&auto=webp&s=90817072131b3aab7dc4868a4e67a4145d1b6990"
+            },
+            {
+                "title": "Thunderbolts",
+                "file": "thunderbolts.html",
+                "poster": "https://cdn.marvel.com/content/1x/thunderboltsposter.jpeg"
+            },
+            {
+                "title": "X-Men",
+                "file": "x-men.html",
+                "poster": "https://www.themoviedb.org/t/p/original/5MQVP4qQxw6yAYp0Iooh5BRxujA.jpg"
+            },
+            {
+                "title": "X2: X-Men United",
+                "file": "x2-x-men-united.html",
+                "poster": "https://www.themoviedb.org/t/p/original/loBfB5BtuQ2muFqi0FciWVMiRf4.jpg"
+            },
+            {
+                "title": "X-Men: The Last Stand",
+                "file": "x-men-the-last-stand.html",
+                "poster": "https://www.themoviedb.org/t/p/original/6P5udwNxJdPvZ4S6mzZGxGg9TZP.jpg"
+            },
+            {
+                "title": "X-Men Origins: Wolverine",
+                "file": "x-men-origins-wolverine.html",
+                "poster": "https://www.themoviedb.org/t/p/original/fhQoQfejY1hUcwyuLgpBrYs6uFt.jpg"
+            },
+            {
+                "title": "X-Men: First Class",
+                "file": "x-men-first-class.html",
+                "poster": "https://www.themoviedb.org/t/p/original/6X2YjjYcs8XyZRDmJAHNDlls7L4.jpg"
+            },
+            {
+                "title": "The Wolverine",
+                "file": "the-wolverine.html",
+                "poster": "https://www.themoviedb.org/t/p/original/dYtAyg4vR2jQH0J7Um0ouO54zED.jpg"
+            },
+            {
+                "title": "X-Men: Days of Future Past",
+                "file": "x-men-days-of-future-past.html",
+                "poster": "https://www.themoviedb.org/t/p/original/qKkFk9HELmABpcPoc1HHZGIxQ5a.jpg"
+            },
+            {
+                "title": "Deadpool",
+                "file": "deadpool.html",
+                "poster": "https://www.themoviedb.org/t/p/original/inVq3FRqcYIRl2la8iZikYYxFNR.jpg"
+            },
+            {
+                "title": "X-Men: Apocalypse",
+                "file": "x-men-apocalypse.html",
+                "poster": "https://www.themoviedb.org/t/p/original/2mtQwJKVKQrZgTz49Dizb25eOQQ.jpg"
+            },
+            {
+                "title": "Logan",
+                "file": "logan.html",
+                "poster": "https://www.themoviedb.org/t/p/original/fnbjcRDYn6YviCcePDnGdyAkYsB.jpg"
+            },
+            {
+                "title": "Deadpool 2",
+                "file": "deadpool-2.html",
+                "poster": "https://www.themoviedb.org/t/p/original/to0spRl1CMDvyUbOnbb4fTk3VAd.jpg"
+            },
+            {
+                "title": "Dark Phoenix",
+                "file": "dark-phoenix.html",
+                "poster": "https://www.themoviedb.org/t/p/original/cCTJPelKGLhALq3r51A9uMonxKj.jpg"
+            },
+            {
+                "title": "The New Mutants",
+                "file": "the-new-mutants.html",
+                "poster": "https://www.themoviedb.org/t/p/original/xZNw9xxtwbEf25NYoz52KdbXHPM.jpg"
+            },
+            {
+                "title": "Fantastic Four (2005)",
+                "file": "fantastic-four-2005.html",
+                "poster": "https://www.themoviedb.org/t/p/original/5TXG0vP2u5dNWfCwS6YkwNwMfXZ.jpg"
+            },
+            {
+                "title": "Fantastic Four: Rise of the Silver Surfer",
+                "file": "fantastic-four-rise-of-the-silver-surfer.html",
+                "poster": "https://www.themoviedb.org/t/p/original/7HCJfK8lEJt1u6EJQ6zQ0gz9c5G.jpg"
+            },
+            {
+                "title": "Fantastic Four (2015)",
+                "file": "fantastic-four-2015.html",
+                "poster": "https://www.themoviedb.org/t/p/original/g23cs30dCMiG4ldaoVNP1ucjs6.jpg"
+            },
+            {
+                "title": "Venom",
+                "file": "venom.html",
+                "poster": "https://www.themoviedb.org/t/p/original/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg"
+            },
+            {
+                "title": "Venom: Let There Be Carnage",
+                "file": "venom-let-there-be-carnage.html",
+                "poster": "https://www.themoviedb.org/t/p/original/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg"
+            },
+            {
+                "title": "Morbius",
+                "file": "morbius.html",
+                "poster": "https://www.themoviedb.org/t/p/original/6JjfSchsU6daXk2AKX8EEBjO3Fm.jpg"
+            },
+            {
+                "title": "Blade",
+                "file": "blade.html",
+                "poster": "https://www.themoviedb.org/t/p/original/4U3KZ0usxFId9noqgkyYER29dfq.jpg"
+            },
+            {
+                "title": "Blade II",
+                "file": "blade-ii.html",
+                "poster": "https://www.themoviedb.org/t/p/original/2vQuGZzNHCLgt3tyl1h3QOZ3fki.jpg"
+            },
+            {
+                "title": "Blade: Trinity",
+                "file": "blade-trinity.html",
+                "poster": "https://www.themoviedb.org/t/p/original/lI41j7OlvV06B1sY4U0D1v49Cqr.jpg"
+            },
+            {
+                "title": "Ghost Rider",
+                "file": "ghost-rider.html",
+                "poster": "https://www.themoviedb.org/t/p/original/8LaVQiXA3uZ7gH4cQ7P8KuA6HKg.jpg"
+            },
+            {
+                "title": "Ghost Rider: Spirit of Vengeance",
+                "file": "ghost-rider-spirit-of-vengeance.html",
+                "poster": "https://www.themoviedb.org/t/p/original/7eT1qEfMzV5tYx8S3b6K2fUAi0C.jpg"
+            },
+            {
+                "title": "The Punisher (2004)",
+                "file": "the-punisher-2004.html",
+                "poster": "https://www.themoviedb.org/t/p/original/z2yRfiG2XPFgq2uC8Wv5i9u8ZRW.jpg"
+            },
+            {
+                "title": "Punisher: War Zone",
+                "file": "punisher-war-zone.html",
+                "poster": "https://www.themoviedb.org/t/p/original/eM6u4oY1s4CggBfeBgoB9prYg3K.jpg"
+            },
+            {
+                "title": "Hulk (2003)",
+                "file": "hulk-2003.html",
+                "poster": "https://www.themoviedb.org/t/p/original/xnPqMQ84Tj0qQ3Mo7pO9VRS5t4m.jpg"
+            },
+            {
+                "title": "Blade",
+                "file": "blade.html",
+                "poster": "https://www.themoviedb.org/t/p/original/l8BKvDRQ8g3oN3cLLtv7vNfQU7i.jpg"
+            },
+            {
+                "title": "Blade II",
+                "file": "blade-ii.html",
+                "poster": "https://www.themoviedb.org/t/p/original/2H3vM5C5YjO9VWNiBmM9mgnbhVi.jpg"
+            },
+            {
+                "title": "Blade: Trinity",
+                "file": "blade-trinity.html",
+                "poster": "https://www.themoviedb.org/t/p/original/kh2R3Rz3kQoOZzMRB5NHV4XWaA0.jpg"
+            },
+            {
+                "title": "Daredevil",
+                "file": "daredevil.html",
+                "poster": "https://www.themoviedb.org/t/p/original/yhIuF6S6vMYnUqE5d7q6EIXwqsP.jpg"
+            },
+            {
+                "title": "Elektra",
+                "file": "elektra.html",
+                "poster": "https://www.themoviedb.org/t/p/original/bm7xH4qQWnRo4VBSeuqAaj3BiNE.jpg"
+            },
+            {
+                "title": "Ghost Rider",
+                "file": "ghost-rider.html",
+                "poster": "https://www.themoviedb.org/t/p/original/qUSaFZV2OeYXWfCH8j0b24LhXNp.jpg"
+            },
+            {
+                "title": "Ghost Rider: Spirit of Vengeance",
+                "file": "ghost-rider-spirit-of-vengeance.html",
+                "poster": "https://www.themoviedb.org/t/p/original/tDtmN6NuD9BBYjg6ZVt0RlfpHEq.jpg"
+            },
+            {
+                "title": "Fantastic Four",
+                "file": "fantastic-four.html",
+                "poster": "https://www.themoviedb.org/t/p/original/zP3fdv6GwRzK6r3Uoy9Lrb2pOjl.jpg"
+            },
+            {
+                "title": "Fantastic Four: Rise of the Silver Surfer",
+                "file": "fantastic-four-rise-of-the-silver-surfer.html",
+                "poster": "https://www.themoviedb.org/t/p/original/zfiV2nBcN3Ej1flgm6YzaWs4ITW.jpg"
+            },
+            {
+                "title": "Hulk",
+                "file": "hulk.html",
+                "poster": "https://www.themoviedb.org/t/p/original/aKx1ARwG55D4mY0beJYH2pkqLJp.jpg"
+            },
+            {
+                "title": "The Punisher (2004)",
+                "file": "the-punisher-2004.html",
+                "poster": "https://www.themoviedb.org/t/p/original/l76Rgp32z2UxjULA4FejOqz1iVh.jpg"
+            },
+            {
+                "title": "Punisher: War Zone",
+                "file": "punisher-war-zone.html",
+                "poster": "https://www.themoviedb.org/t/p/original/nV6QqtVjlYCuZ8MZsmS4d8KC6oU.jpg"
+            },
+            {
+                "title": "Spider-Man (2002)",
+                "file": "spider-man-2002.html",
+                "poster": "https://www.themoviedb.org/t/p/original/gh4cZbhZxyTbgxQPxD0dOudNPTn.jpg"
+            },
+            {
+                "title": "Spider-Man 2",
+                "file": "spider-man-2.html",
+                "poster": "https://www.themoviedb.org/t/p/original/olxpyq9kJAZ2NU1siLshhhXEPR7.jpg"
+            },
+            {
+                "title": "Spider-Man 3",
+                "file": "spider-man-3.html",
+                "poster": "https://www.themoviedb.org/t/p/original/qFmwhVUoUSXjkKRmca5yGDEXBIj.jpg"
+            },
+            {
+                "title": "The Amazing Spider-Man",
+                "file": "the-amazing-spider-man.html",
+                "poster": "https://www.themoviedb.org/t/p/original/bNR3wx3HQhZzGkZGcV9wzXlGAVn.jpg"
+            },
+            {
+                "title": "The Amazing Spider-Man 2",
+                "file": "the-amazing-spider-man-2.html",
+                "poster": "https://www.themoviedb.org/t/p/original/c3e9e18SSlvFd1cQaGmUj5tqL5P.jpg"
+            },
+            {
+                "title": "X-Men",
+                "file": "x-men.html",
+                "poster": "https://www.themoviedb.org/t/p/original/6QMSLvU5ziIL2T6VrkaKzN2YkxK.jpg"
+            },
+            {
+                "title": "X2: X-Men United",
+                "file": "x2-x-men-united.html",
+                "poster": "https://www.themoviedb.org/t/p/original/aVpJz8pwuLFsGQfEemvGKrExQWM.jpg"
+            },
+            {
+                "title": "X-Men: The Last Stand",
+                "file": "x-men-the-last-stand.html",
+                "poster": "https://www.themoviedb.org/t/p/original/6yE9DkBA6OjlxH6k7zoOTZO5DHn.jpg"
+            },
+            {
+                "title": "WandaVision",
+                "file": "wandavision.html",
+                "poster": "https://www.themoviedb.org/t/p/original/glKDfE6btIRcVB5zrjspRIs4r52.jpg"
+            },
+            {
+                "title": "The Falcon and the Winter Soldier",
+                "file": "the-falcon-and-the-winter-soldier.html",
+                "poster": "https://www.themoviedb.org/t/p/original/6kbAMLteGO8yyewYau6bJ683sw7.jpg"
+            },
+            {
+                "title": "Loki",
+                "file": "loki.html",
+                "poster": "https://www.themoviedb.org/t/p/original/kEl2t3OhXc3Zb9FBh1AuYzRTgZp.jpg"
+            },
+            {
+                "title": "What If...?",
+                "file": "what-if.html",
+                "poster": "https://www.themoviedb.org/t/p/original/lztz5XBMG1x6Y5ubz7CxfPFsAcW.jpg"
+            },
+            {
+                "title": "Hawkeye",
+                "file": "hawkeye.html",
+                "poster": "https://www.themoviedb.org/t/p/original/ct5jARMgJLimA8UrKXQ5J3Q0T4R.jpg"
+            },
+            {
+                "title": "Moon Knight",
+                "file": "moon-knight.html",
+                "poster": "https://www.themoviedb.org/t/p/original/x6FsYvt33846IQnDSFxla9j0RX8.jpg"
+            },
+            {
+                "title": "Ms. Marvel",
+                "file": "ms-marvel.html",
+                "poster": "https://www.themoviedb.org/t/p/original/2L6rPyaCvn8GJ5Eho5uJpRlxWJ8.jpg"
+            },
+            {
+                "title": "She-Hulk: Attorney at Law",
+                "file": "she-hulk-attorney-at-law.html",
+                "poster": "https://www.themoviedb.org/t/p/original/zWlPjM6aXiUR3lMH8v2xvNwK4DY.jpg"
+            },
+            {
+                "title": "Secret Invasion",
+                "file": "secret-invasion.html",
+                "poster": "https://www.themoviedb.org/t/p/original/uN0wxTC21tuH4QXc7aVDUO8MjbV.jpg"
+            },
+            {
+                "title": "Echo",
+                "file": "echo.html",
+                "poster": "https://www.themoviedb.org/t/p/original/mnDhwTw1v1UABwZX7xO7rVXB4fF.jpg"
+            },
+            {
+                "title": "Marvel's Daredevil",
+                "file": "marvels-daredevil.html",
+                "poster": "https://www.themoviedb.org/t/p/original/QWbPaDxiB6LW2LjASknzYBvjMj.jpg"
+            },
+            {
+                "title": "Marvel's Jessica Jones",
+                "file": "marvels-jessica-jones.html",
+                "poster": "https://www.themoviedb.org/t/p/original/6zULW8o7eyP3xBlGkyaZkY2pFzj.jpg"
+            },
+            {
+                "title": "Marvel's Luke Cage",
+                "file": "marvels-luke-cage.html",
+                "poster": "https://www.themoviedb.org/t/p/original/4l6KD9HhtD6nCDEfg10Lp6C6zah.jpg"
+            },
+            {
+                "title": "Marvel's Iron Fist",
+                "file": "marvels-iron-fist.html",
+                "poster": "https://www.themoviedb.org/t/p/original/9lTVQlcC2hsjD2TtB3r6o9g2v7c.jpg"
+            },
+            {
+                "title": "Marvel's The Defenders",
+                "file": "marvels-the-defenders.html",
+                "poster": "https://www.themoviedb.org/t/p/original/hYZeQe8DRaKgc5HqGYp9tfAFRYW.jpg"
+            },
+            {
+                "title": "Marvel's The Punisher",
+                "file": "marvels-the-punisher.html",
+                "poster": "https://www.themoviedb.org/t/p/original/x3uw5ac3TYebbn2B94ZnfM34uOc.jpg"
+            },
+            {
+                "title": "Marvel's Agents of S.H.I.E.L.D.",
+                "file": "marvels-agents-of-shield.html",
+                "poster": "https://www.themoviedb.org/t/p/original/yGNnjoIGOdQy3douq60tULY8teK.jpg"
+            },
+            {
+                "title": "Marvel's Agent Carter",
+                "file": "marvels-agent-carter.html",
+                "poster": "https://www.themoviedb.org/t/p/original/jHBhD97Gyj2szs5RvN0CazV6rFA.jpg"
+            },
+            {
+                "title": "Marvel's Inhumans",
+                "file": "marvels-inhumans.html",
+                "poster": "https://www.themoviedb.org/t/p/original/3kz3t7eRz3H5hIUzapSJKwPJVDV.jpg"
+            },
+            {
+                "title": "Marvel's Runaways",
+                "file": "marvels-runaways.html",
+                "poster": "https://www.themoviedb.org/t/p/original/3UX3YcU4ywEd14C9ksA5IwvZ1ub.jpg"
+            },
+            {
+                "title": "The Incredible Hulk",
+                "file": "the-incredible-hulk-series.html",
+                "poster": "https://www.themoviedb.org/t/p/original/bqV5Z4bAGzPFeZVt8iJHPsuacqb.jpg"
+            },
+            {
+                "title": "Spider-Man: The Animated Series",
+                "file": "spider-man-the-animated-series.html",
+                "poster": "https://www.themoviedb.org/t/p/original/u0bqH33vdcyaZK2zzn3E4V3vTUN.jpg"
+            },
+            {
+                "title": "X-Men: The Animated Series",
+                "file": "x-men-the-animated-series.html",
+                "poster": "https://www.themoviedb.org/t/p/original/8b3WHeT6YyRCiG6LQpH2UROm5tw.jpg"
+            },
+            {
+                "title": "Fantastic Four: The Animated Series",
+                "file": "fantastic-four-the-animated-series.html",
+                "poster": "https://www.themoviedb.org/t/p/original/n8l7gRyvE4s46HoPazTApZ1PpYd.jpg"
+            },
+            {
+                "title": "The Super Hero Squad Show",
+                "file": "the-super-hero-squad-show.html",
+                "poster": "https://www.themoviedb.org/t/p/original/6Zgx6l7K8EjKk7ePRZc2U6wFV2f.jpg"
+            },
+            {
+                "title": "Avengers: Earth's Mightiest Heroes",
+                "file": "avengers-earths-mightiest-heroes.html",
+                "poster": "https://www.themoviedb.org/t/p/original/5v5V5jC2l3xtpURF8VqV1c0JrS7.jpg"
+            },
+            {
+                "title": "Ultimate Spider-Man",
+                "file": "ultimate-spider-man.html",
+                "poster": "https://www.themoviedb.org/t/p/original/6E3Tj7Pyk7hHoxJ1TUCXaaCulnN.jpg"
+            },
+            {
+                "title": "Hulk and the Agents of S.M.A.S.H.",
+                "file": "hulk-and-the-agents-of-smash.html",
+                "poster": "https://www.themoviedb.org/t/p/original/fPKh2UXLZgnRFdZ9cq9Zb5UUEto.jpg"
+            },
+            {
+                "title": "Guardians of the Galaxy (Animated Series)",
+                "file": "guardians-of-the-galaxy-animated-series.html",
+                "poster": "https://www.themoviedb.org/t/p/original/f4ZTZGi99ZTSdKCbFf8gDuwZQz4.jpg"
+            }
         ];
 
         function searchMovies() {
