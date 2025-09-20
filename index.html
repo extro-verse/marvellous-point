@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marvel Index - Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
@@ -25,6 +26,21 @@
             -webkit-backdrop-filter: blur(12px);
             border-radius: 12px;
             border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .scramble-container {
+            font-family: monospace, monospace;
+            font-size: 1.5rem;
+            color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        .credit {
+            font-family: Arial, sans-serif;
+            font-size: 1rem;
+            color: #666;
+            text-align: center;
+            margin-top: 10px;
         }
 
         ::-webkit-scrollbar {
@@ -145,8 +161,60 @@
     <header
         class="fixed top-0 left-0 right-0 z-50 px-4 py-3 flex justify-between items-center bg-black bg-opacity-90 backdrop-filter backdrop-blur-lg">
         <div class="flex items-center">
-            <div class="text-2xl font-bold bg-gradient-to-r from-gray-300 to-gray-100 bg-clip-text text-transparent">
-                Marvel Index
+            <div 
+                class="text-lg font-mono text-red-300"
+                x-data="{
+                    words: ['Marvel Index', 'マーベル', '漫威索引', 'Индекс Marvel', '마블 인덱스', 'மார்வெல்', 'മാർവൽ', 'मार्वल', 'మార్వెల్'],
+                    currentIndex: 0,
+                    scrambledText: '',
+                    isInitialized: false,
+                    startOnView: false,
+                    CHARACTERS: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzさきも光',
+                    getRandomChar() {
+                        return this.CHARACTERS[Math.floor(Math.random() * this.CHARACTERS.length)];
+                    },
+                    initScramble() {
+                        if (this.startOnView) {
+                            this.setupIntersectionObserver();
+                        } else {
+                            this.startRotation();
+                        }
+                    },
+                    setupIntersectionObserver() {
+                        const observer = new IntersectionObserver((entries) => {
+                            if (entries[0].isIntersecting && !this.isInitialized) {
+                                this.startRotation();
+                                observer.disconnect();
+                            }
+                        }, { threshold: 0.1 });
+                        observer.observe(this.$el);
+                    },
+                    async startRotation() {
+                        if (this.isInitialized) return;
+                        this.isInitialized = true;
+                        this.scrambledText = this.words[0];
+                        while (true) {
+                            await new Promise(resolve => setTimeout(resolve, 2500));
+                            const nextIndex = (this.currentIndex + 1) % this.words.length;
+                            await this.scrambleTransition(this.words[nextIndex]);
+                            this.currentIndex = nextIndex;
+                        }
+                    },
+                    async scrambleTransition(toWord) {
+                        const steps = 15;
+                        const stepDuration = 40;
+                        for (let i = 0; i <= steps; i++) {
+                            this.scrambledText = toWord.split('').map((char, index) => {
+                                if (i === steps) return toWord[index] || ' ';
+                                return Math.random() < i / steps ? (toWord[index] || ' ') : this.getRandomChar();
+                            }).join('');
+                            await new Promise(resolve => setTimeout(resolve, stepDuration));
+                        }
+                    }
+                }" 
+                x-init="initScramble()">
+                <span x-text="scrambledText">Inspired</span>
+                <p style="font-size: x-small; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">~ Team MTO</p>
             </div>
         </div>
         <div class="relative search-bar flex items-center bg-gray-800 bg-opacity-50 rounded-full px-3 py-1">
@@ -1150,7 +1218,7 @@
         }
 
         function updateCountdown() {
-            const releaseDate = new Date("2025-10-03T00:00:00");
+            const releaseDate = new Date("2025-09-24T00:00:00");
             const today = new Date();
             const timeDiff = releaseDate - today;
             const daysLeft = Math.max(0, Math.ceil(timeDiff / (1000 * 60 * 60 * 24)));
@@ -1179,5 +1247,4 @@
         }
     </script>
 </body>
-
 </html>
