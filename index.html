@@ -177,7 +177,7 @@
     <header
         class="fixed top-0 left-0 right-0 z-50 px-4 py-3 flex justify-between items-center bg-black bg-opacity-90 backdrop-filter backdrop-blur-lg">
         <div class="flex items-center">
-            <div class="text-lg font-mono text-red-300" x-data="{
+            <div class="text-lg font-mono text-green-300" x-data="{
                     words: ['Marvel Index', 'マーベル・インデックス', '漫威索引', 'Индекс Marvel', '마블 인덱스', 'மார்வெல் இன்டெக்ஸ்', 'മാർവൽ ഇൻഡെക്സ്', 'मार्वल इंडेक्स', 'మార్వెల్ ఇండెక్స్'],
                     currentIndex: 0,
                     scrambledText: '',
@@ -250,6 +250,35 @@
         <!-- Hero Section (Horizontal Scrollable) -->
         <section class="relative mb-6">
             <div class="flex space-x-4 overflow-x-auto scroll-hidden pb-4">
+                <!-- Avengers: Doomsday (New Special Timer Item) -->
+                <div
+                    class="hero-carousel-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 relative rounded-xl overflow-hidden">
+                    <div class="aspect-video w-full flex items-center justify-center">
+                        <img src="https://cdn.marvel.com/content/2x/avengersdoomsday_lob_mas_mob_02.jpg"
+                            alt="Avengers: Doomsday" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 hero-gradient"></div>
+                        <div class="absolute bottom-0 left-0 right-0 z-20 p-4">
+                            <h1 class="text-2xl font-bold mb-2">Avengers: Doomsday</h1>
+                            <p class="text-sm text-gray-300 mb-2">Coming Soon - December 18, 2026</p>
+                            <div id="doomsday-countdown" class="text-lg font-semibold mb-4"></div>
+                            <div class="flex space-x-3">
+                                <button id="doomsday-notify-btn"
+                                    class="relative px-6 py-2 font-semibold rounded-xl text-white backdrop-blur-lg bg-white/10 border border-white/30 shadow-md transition-all duration-300 hover:bg-white/20 hover:border-white/50 hover:shadow-lg">
+                                    <span
+                                        class="absolute inset-0 bg-gradient-to-r from-green-500 to-red-500 opacity-30 blur-lg"></span>
+                                    <span class="relative">Coming Soon</span>
+                                </button>
+                                <button id="doomsday-stream-btn"
+                                    class="hidden relative px-6 py-2 font-semibold rounded-xl text-white backdrop-blur-lg bg-white/10 border border-white/30 shadow-md transition-all duration-300 hover:bg-white/20 hover:border-white/50 hover:shadow-lg">
+                                    <span
+                                        class="absolute inset-0 bg-gradient-to-r from-green-500 to-red-500 opacity-30 blur-lg"></span>
+                                    <i class="fas fa-play mr-2"></i><span class="relative">Now Streaming</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Marvel Zomibes -->
                 <div
                     class="hero-carousel-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 relative rounded-xl overflow-hidden">
@@ -261,12 +290,14 @@
                             <div class="flex space-x-3">
                                 <button
                                     class="bg-white text-black px-4 py-1 rounded-full text-sm font-semibold flex items-center hover:bg-gray-200 transition">
-                                    <i class="fas fa-play mr-2"></i><a href="https://t.me/X9vR3qLz_bot?start=2a6e11b1-1711-419e-913c-600866ab5558">Now
+                                    <i class="fas fa-play mr-2"></i><a
+                                        href="https://t.me/X9vR3qLz_bot?start=2a6e11b1-1711-419e-913c-600866ab5558">Now
                                         Streaming</a>
                                 </button>
                                 <button
                                     class="glass-card px-4 py-1 rounded-full text-sm font-semibold flex items-center text-white hover:bg-gray-800 transition">
-                                    <i class="fas fa-info-circle mr-2"></i><a href="https://t.me/+kW1AzjsoovRmZDU1">Access</a>
+                                    <i class="fas fa-info-circle mr-2"></i><a
+                                        href="https://t.me/+kW1AzjsoovRmZDU1">Access</a>
                                 </button>
                             </div>
                         </div>
@@ -371,43 +402,73 @@
         <br>
 
         <!-- Coming Soon Banner -->
-        <!-- <section class="relative rounded-xl mb-6 h-64 flex overflow-x-auto pb-2 mb-4 hide-scrollbar">
+        <!-- Avengers: Doomsday Teaser Trailer Section (YouTube-Style, No Sound) -->
+        <section class="relative rounded-xl mb-6 h-64 flex overflow-x-auto pb-2 mb-4 hide-scrollbar">
             <div class="absolute inset-0 hero-gradient z-10">
-                <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnNwNmtkdWMzNDhrbGpxbGp5ZzZkem1vdXR0bWx5MXl5N242ejU0NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NVDopb1v6GknG72IlE/giphy.gif" alt="Marvel Zombies" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <div class="absolute bottom-8 left-8">
-                    <div id="zombies-timer" class="mt-4 px-4 py-3 rounded-xl bg-black/50 text-white text-sm font-medium backdrop-blur-md border border-white/20 shadow-md max-w-xs">
-                        Days Until the Next Marvel Project:<br>
-                        <strong>Marvel Zombies</strong>: <span id="days-left">...</span> Days Left  
-                        <button class="mt-4 relative px-6 py-2 font-semibold rounded-xl text-white bg-transparent border border-white/30 shadow-md transition-all duration-300 hover:bg-white/10 hover:border-white/50 hover:shadow-lg">
-                            <span class="absolute inset-0 bg-gradient-to-r from-blue-500 to-red-500 opacity-20 blur-lg"></span>
-                            <a href="https://t.me/+kW1AzjsoovRmZDU1"><span class="relative">Notify</span></a>
+                <!-- Trailer Thumbnail / Poster -->
+                <img src="https://i.ytimg.com/vi/NeFx7QrhfU0/maxresdefault.jpg"
+                    alt="Avengers: Doomsday Official Teaser Trailer" class="w-full h-full object-cover">
+
+                <!-- Dark overlay for text readability -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+
+                <!-- "No Audio" Badge -->
+                <div
+                    class="absolute top-4 right-4 bg-black/70 text-white text-xs px-3 py-1 rounded-full font-semibold z-30">
+                    New Trailer
+                </div>
+
+                <!-- Content Info -->
+                <div class="absolute bottom-8 left-8 z-20">
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2e317a1c-f1ce-4a5f-90db-d88cc01db2d0/djsj7mh-3803a413-f65b-4a92-ab58-93cf35419608.png/v1/fill/w_1193,h_670/avengers_doomsday_logo_png_2024_hd_by_mrandrew7w7_djsj7mh-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjcwIiwicGF0aCI6Ii9mLzJlMzE3YTFjLWYxY2UtNGE1Zi05MGRiLWQ4OGNjMDFkYjJkMC9kanNqN21oLTM4MDNhNDEzLWY2NWItNGE5Mi1hYjU4LTkzY2YzNTQxOTYwOC5wbmciLCJ3aWR0aCI6Ijw9MTE5MyJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.6srnWuyeOdl-F6pcUZky8RzBxKeZxmYvgPJoeAZXgPw"
+                        alt="Avengers: Doomsday Official Logo" class="h-16 md:h-20 lg:h-24 w-auto mb-2" style="filter: drop-shadow(0 4px 6px rgba(0,0,0,0.8));">
+                    <p class="text-sm text-gray-100 max-w-md">Official Teaser Trailer (2026)</p>
+                    <p class="text-sm text-gray-300 mt-1">In theaters December 18, 2026</p>
+
+                    <div class="flex space-x-3 mt-4">
+                        <!-- <button id="notify-btn"
+                            class="relative px-6 py-2 font-semibold rounded-xl text-white backdrop-blur-lg bg-white/10 border border-white/30 shadow-md transition-all duration-300 hover:bg-white/20 hover:border-white/50 hover:shadow-lg">
+                            <span
+                                class="absolute inset-0 bg-gradient-to-r from-green-500 to-red-500 opacity-30 blur-lg"></span>
+                            <a href="#"><span class="relative">Notify Me</span></a>
+                        </button> -->
+                        <!-- Optional: Link to actual trailer if you want -->
+                        <button
+                            class="glass-card px-4 py-2 rounded-full text-sm font-semibold flex items-center text-white hover:bg-gray-800 transition">
+                            <i class="fas fa-external-link-alt mr-2"></i>
+                            <a href="https://www.youtube.com/watch?v=UiMg566PREA" target="_blank">Watch on YouTube</a>
                         </button>
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
+
         <!-- Marvel Zombies Banner -->
-        <section class="relative rounded-xl mb-6 h-64 flex overflow-x-auto pb-2 mb-4 hide-scrollbar">
+        <!-- <section class="relative rounded-xl mb-6 h-64 flex overflow-x-auto pb-2 mb-4 hide-scrollbar">
             <div class="absolute inset-0 hero-gradient z-10">
                 <img src="https://cdn.abcotvs.com/dip/images/17722317_090225-otrc-marvelzombies-img.jpg"
-                alt="Featured Content" class="w-full h-full object-cover">
+                    alt="Featured Content" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div class="absolute bottom-8 left-8">
                     <h1 class="text-3xl font-bold mb-2 text-white">Marvel Zombies</h1>
                     <p id="timer-text" class="text-sm text-gray-300 max-w-md">Coming Soon - September 24, 2025</p>
                     <div id="countdown" class="text-sm text-gray-200 mb-4"></div>
-                    <button id="notify-btn" class="mt-4 relative px-6 py-2 font-semibold rounded-xl text-white backdrop-blur-lg bg-white/10 border border-white/30 shadow-md transition-all duration-300 hover:bg-white/20 hover:border-white/50 hover:shadow-lg">
-                        <span class="absolute inset-0 bg-gradient-to-r from-blue-500 to-red-500 opacity-30 blur-lg"></span>
+                    <button id="notify-btn"
+                        class="mt-4 relative px-6 py-2 font-semibold rounded-xl text-white backdrop-blur-lg bg-white/10 border border-white/30 shadow-md transition-all duration-300 hover:bg-white/20 hover:border-white/50 hover:shadow-lg">
+                        <span
+                            class="absolute inset-0 bg-gradient-to-r from-blue-500 to-red-500 opacity-30 blur-lg"></span>
                         <a href="#"><span class="relative">Notify Me</span></a>
                     </button>
-                    <button id="stream-btn" class="hidden mt-4 relative px-6 py-2 font-semibold rounded-xl text-white backdrop-blur-lg bg-white/10 border border-white/30 shadow-md transition-all duration-300 hover:bg-white/20 hover:border-white/50 hover:shadow-lg">
-                        <span class="absolute inset-0 bg-gradient-to-r from-blue-500 to-red-500 opacity-30 blur-lg"></span>
-                        <a href="https://t.me/X9vR3qLz_bot?start=2a6e11b1-1711-419e-913c-600866ab5558"><span class="relative">Now Streaming</span></a>
+                    <button id="stream-btn"
+                        class="hidden mt-4 relative px-6 py-2 font-semibold rounded-xl text-white backdrop-blur-lg bg-white/10 border border-white/30 shadow-md transition-all duration-300 hover:bg-white/20 hover:border-white/50 hover:shadow-lg">
+                        <span
+                            class="absolute inset-0 bg-gradient-to-r from-blue-500 to-red-500 opacity-30 blur-lg"></span>
+                        <a href="https://t.me/X9vR3qLz_bot?start=2a6e11b1-1711-419e-913c-600866ab5558"><span
+                                class="relative">Now Streaming</span></a>
                     </button>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Upcoming Movies -->
         <section class="mb-8">
@@ -1241,34 +1302,53 @@
                 "poster": "https://www.themoviedb.org/t/p/original/f4ZTZGi99ZTSdKCbFf8gDuwZQz4.jpg"
             }
         ];
-        const targetDate = new Date('September 24, 2025 12:30:00').getTime();
-        const countdownElement = document.getElementById('countdown');
-        const timerTextElement = document.getElementById('timer-text');
-        const notifyButton = document.getElementById('notify-btn');
-        const streamButton = document.getElementById('stream-btn');
 
-        function updateCountdown() {
+        const doomsdayDate = new Date('December 18, 2026 00:00:00').getTime();
+        const doomsdayCountdownElement = document.getElementById('doomsday-countdown');
+        const doomsdayNotifyBtn = document.getElementById('doomsday-notify-btn');
+        const doomsdayStreamBtn = document.getElementById('doomsday-stream-btn');
+
+        function updateDoomsdayCountdown() {
             const now = new Date().getTime();
-            const timeLeft = targetDate - now;
+            const timeLeft = doomsdayDate - now;
 
             if (timeLeft <= 0) {
-                timerTextElement.textContent = 'Now Streaming';
-                countdownElement.style.display = 'none';
-                notifyButton.classList.add('hidden');
-                streamButton.classList.remove('hidden');
+                doomsdayCountdownElement.textContent = 'Now In Theaters!';
+                doomsdayCountdownElement.style.display = 'none';
+                doomsdayNotifyBtn.classList.add('hidden');
+                doomsdayStreamBtn.classList.remove('hidden');
+                console.log('Doomsday released!');
                 return;
             }
 
-            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            // Calculate approximate months (30.4375 days average)
+            const months = Math.floor(timeLeft / (1000 * 60 * 60 * 24 * 30.4375));
+            let remaining = timeLeft % (1000 * 60 * 60 * 24 * 30.4375);
 
-            countdownElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
+            remaining %= (1000 * 60 * 60 * 24);
+
+            const hours = Math.floor(remaining / (1000 * 60 * 60));
+            remaining %= (1000 * 60 * 60);
+
+            const minutes = Math.floor(remaining / (1000 * 60));
+            const seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+
+            // Build readable string
+            let text = '';
+            if (months > 0) text += `${months} month${months > 1 ? 's' : ''}, `;
+            text += `${days} day${days > 1 ? 's' : ''}, `;
+            text += `${hours}h ${minutes}m`;
+
+            // Uncomment if you want seconds
+            // text += ` ${seconds}s`;
+
+            doomsdayCountdownElement.textContent = text.trim();
+            console.log(`Doomsday countdown: ${text}`); // Debug log
         }
 
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
+        updateDoomsdayCountdown();
+        setInterval(updateDoomsdayCountdown, 1000);
 
         function searchMovies() {
             const searchInput = document.getElementById('searchInput').value.trim().toLowerCase();
@@ -1306,4 +1386,5 @@
         }
     </script>
 </body>
+
 </html>
