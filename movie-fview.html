@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing</title>
+    <style>
+        :root {
+            --bg: #0f0f10;
+            --surface: #1c1c1e;
+            --card-bg: #1a1a1c;
+            --text: #ffffff;
+            --text-sec: #b3b3b3;
+            --text-muted: #8e8e93;
+            --accent: #ffffff;
+            --focus: #2997ff;
+            --shadow: rgba(0, 0, 0, 0.55);
+            --glass: rgba(28, 28, 30, 0.65);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'SF Pro Display', 'Inter', system-ui, -apple-system, sans-serif;
+            min-height: 100vh;
+            line-height: 1.4;
+        }
+
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 32px;
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                padding: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 16px;
+            }
+        }
+
+        .header-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .back-button {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text);
+            font-size: 18px;
+            font-weight: 300;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            flex-shrink: 0;
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: scale(1.08);
+        }
+
+        .back-button:focus-visible {
+            outline: 2px solid var(--focus);
+            outline-offset: 4px;
+        }
+
+        .back-button span {
+            line-height: 1;
+            transform: translateX(-1px);
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            line-height: 28px;
+            margin: 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 20px 16px;
+            list-style: none;
+        }
+
+        @media (max-width: 1200px) {
+            .grid {
+                grid-template-columns: repeat(6, 1fr);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px 12px;
+            }
+
+            .header-row {
+                gap: 10px;
+            }
+
+            .back-button {
+                width: 32px;
+                height: 32px;
+                font-size: 16px;
+            }
+        }
+
+        .card {
+            position: relative;
+            aspect-ratio: 2 / 3;
+            border-radius: 14px;
+            overflow: hidden;
+            background: var(--card-bg);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            will-change: transform, box-shadow;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .card:focus-visible {
+            outline: 2px solid var(--focus);
+            outline-offset: 4px;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.75) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .badge {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            z-index: 2;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 4px 6px;
+            border-radius: 6px;
+            backdrop-filter: blur(4px);
+        }
+
+        .card-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 16px 12px 12px;
+            z-index: 2;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+        }
+
+        .card-title {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            line-height: 18px;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header-row">
+            <button class="back-button" aria-label="Go back">
+                <span>←</span>
+            </button>
+            <h1 class="section-title">New Releases</h1>
+        </div>
+
+        <ul class="grid" role="list">
+
+            <li class="card" tabindex="0">
+                <div class="badge">tv+</div>
+                <img src="https://www.apple.com/tv-pr/articles/2023/02/apple-tv-announces-season-three-renewal-for-tehran-with-emmy-award-nominee-hugh-laurie-set-to-join-award-winning-series/images/big-image/ATV_Tehran_key_art_big_image_post.jpg.large.jpg"
+                    alt="Tehran Season 3" loading="lazy">
+                <div class="card-info">
+                    <h3 class="card-title">Tehran – Season 3</h3>
+                </div>
+            </li>
+
+            <li class="card" tabindex="0">
+                <div class="badge">tv+</div>
+                <img src="https://www.vitalthrills.com/wp-content/uploads/2025/12/hijackapple1.jpg"
+                    alt="Hijack Season 2" loading="lazy">
+                <div class="card-info">
+                    <h3 class="card-title">Hijack – Season 2</h3>
+                </div>
+            </li>
+
+            <li class="card" tabindex="0">
+                <div class="badge">tv+</div>
+                <img src="https://www.apple.com/tv-pr/shows-and-films/d/drops-of-god/images/season-02/thumbnail/key-art-01/Apple_TV_Drops_Of_God_key_art_main_16_9.jpg"
+                    alt="Drops of God Season 2" loading="lazy">
+                <div class="card-info">
+                    <h3 class="card-title">Drops of God – Season 2</h3>
+                </div>
+            </li>
+
+            <li class="card" tabindex="0">
+                <div class="badge">tv+</div>
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/7P_qW1JAZFO_4O86tkFLGg/225x338CA.TVA23C01.webp"
+                    alt="Shrinking Season 3" loading="lazy">
+                <div class="card-info">
+                    <h3 class="card-title">Shrinking – Season 3</h3>
+                </div>
+            </li>
+
+            <li class="card" tabindex="0">
+                <div class="badge">tv+</div>
+                <img src="https://www.apple.com/tv-pr/articles/2023/06/apple-tv-renews-hit-world-building-drama-silo-for-season-two/images/big-image/big-image-01/061323_Silo_Season_Two_Announcement_Post_Big_Image_01_big_image_post.jpg.og.jpg"
+                    alt="Silo Season 2" loading="lazy">
+                <div class="card-info">
+                    <h3 class="card-title">Silo – Season 2</h3>
+                </div>
+            </li>
+
+            <li class="card" tabindex="0">
+                <div class="badge">tv+</div>
+                <img src="https://i.etsystatic.com/59717001/r/il/29408f/7176323138/il_570xN.7176323138_r3cu.jpg"
+                    alt="Severance Season 2" loading="lazy">
+                <div class="card-info">
+                    <h3 class="card-title">Severance – Season 2</h3>
+                </div>
+            </li>
+
+            <li class="card" tabindex="0">
+                <div class="badge">tv+</div>
+                <img src="https://preview.redd.it/official-poster-for-slow-horses-season-5-v0-3emow5dt8ymf1.jpeg?width=640&crop=smart&auto=webp&s=888c0126b13813338ec5875c5b6a1bed1aeb1a59"
+                    alt="Slow Horses Season 5" loading="lazy">
+                <div class="card-info">
+                    <h3 class="card-title">Slow Horses – Season 5</h3>
+                </div>
+            </li>
+
+            <!-- Added main hit Apple TV+ movies -->
+            <li class="card" tabindex="0">
+                <div class="badge">movie</div>
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/ZBJu4aifHuc_51WYSqdk4w/225x338nr.webp"
+                    alt="F1 The Movie" loading="lazy">
+                <div class="card-info">
+                    <h3 class="card-title">F1 – The Movie</h3>
+                </div>
+            </li>
+
+            <li class="card" tabindex="0">
+                <div class="badge">movie</div>
+                <img src="https://www.apple.com/tv-pr/shows-and-films/h/highest-2-lowest/images/thumbnail/key-art-02/Apple_TV_Highest2Lowest_key_art_main_16_9.jpg"
+                    alt="Highest 2 Lowest" loading="lazy">
+                <div class="card-info">
+                    <h3 class="card-title">Highest 2 Lowest</h3>
+                </div>
+            </li>
+
+            <li class="card" tabindex="0">
+                <div class="badge">movie</div>
+                <img src="https://www.apple.com/tv-pr/articles/2024/12/apple-original-films-unveils-trailer-for-the-gorge-new-thriller-starring-starring-miles-teller-anya-taylor-joy-and-sigourney-weaver/images/big-image/big-image-01/120724_The_Gorge_Big_Image_01_big_image_post.jpg.slideshow_large.jpg"
+                    alt="The Gorge" loading="lazy">
+                <div class="card-info">
+                    <h3 class="card-title">The Gorge</h3>
+                </div>
+            </li>
+
+            <li class="card" tabindex="0">
+                <div class="badge">movie</div>
+                <img src="https://www.apple.com/tv-pr/shows-and-films/c/come-see-me-in-the-good-light/images/thumbnail/key-art-02/Apple_TV_Come_See_Me_in_the_Good_Light_key_art_main_16_9.jpg"
+                    alt="Come See Me in the Good Light" loading="lazy">
+                <div class="card-info">
+                    <h3 class="card-title">Come See Me in the Good Light</h3>
+                </div>
+            </li>
+
+            <li class="card" tabindex="0">
+                <div class="badge">movie</div>
+                <img src="https://www.apple.com/tv-pr/shows-and-films/b/blitz/images/thumbnail/key-art-01/Apple_TV_Blitz_key_art_main_16_9.jpg"
+                    <!-- fallback if needed; use a reliable Blitz poster -->
+                alt="Blitz" loading="lazy">
+                <div class="card-info">
+                    <h3 class="card-title">Blitz</h3>
+                </div>
+            </li>
+
+            <li class="card" tabindex="0">
+                <div class="badge">movie</div>
+                <img src="https://www.apple.com/tv-pr/shows-and-films/k/killers-of-the-flower-moon/images/thumbnail/key-art-01/Apple_TV_Killers_of_the_Flower_Moon_key_art_main_16_9.jpg"
+                    alt="Killers of the Flower Moon" loading="lazy">
+                <div class="card-info">
+                    <h3 class="card-title">Killers of the Flower Moon</h3>
+                </div>
+            </li>
+
+            <li class="card" tabindex="0">
+                <div class="badge">movie</div>
+                <img src="https://www.apple.com/tv-pr/shows-and-films/n/napoleon/images/thumbnail/key-art-01/Apple_TV_Napoleon_key_art_main_16_9.jpg"
+                    alt="Napoleon" loading="lazy">
+                <div class="card-info">
+                    <h3 class="card-title">Napoleon</h3>
+                </div>
+            </li>
+
+            <li class="card" tabindex="0">
+                <div class="badge">movie</div>
+                <img src="https://www.apple.com/tv-pr/shows-and-films/c/coda/images/thumbnail/key-art-01/Apple_TV_CODA_key_art_main_16_9.jpg"
+                    alt="CODA" loading="lazy">
+                <div class="card-info">
+                    <h3 class="card-title">CODA</h3>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
